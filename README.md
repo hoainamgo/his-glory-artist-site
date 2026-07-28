@@ -44,25 +44,30 @@ AI Music Project là hệ sinh thái phát hành nhạc do AI tạo ra, vận h�
 ## 🗂️ Tài nguyên dự án
 
 ### 📁 Google Drive — `AI_Music_Project`
-🔗 Folder gốc: `https://drive.google.com/drive/folders/1Mi4H7-iRGbncp_kL7dm7Wh6BfoIUdDC6`
+🔗 **Folder gốc:** https://drive.google.com/drive/folders/1Mi4H7-iRGbncp_kL7dm7Wh6BfoIUdDC6
 
-Cấu trúc:
-```
-AI_Music_Project/
-├── Catalog/            # catalogue JSON (His Glory, Melody v2, v1)
-├── Audio/              # session1/ session2/ his_glory/ TrueLove/
-├── Videos/             # video YouTube + ASS caption
-├── bg-video-music/     # 32 MP4 master background
-├── Thumbnails/         # thumbnail album
-├── Plans/              # kế hoạch phát hành, SEO
-├── Reports/            # báo cáo đánh giá Melody/Harmony
-├── Subagents/          # profile các nghệ sĩ ảo
-├── Elohit/             # audio phòng thu
-├── Release/YouTube/    # release notes SONG_*.md
-├── DRIVE_MAP.md        # bản đồ đồng bộ Local ↔ Drive
-├── ONBOARDING.md       # hướng dẫn onboard
-└── SEO_RELEASE_PLAN.md # kế hoạch SEO
-```
+**Truy cập nhanh từng tài nguyên:**
+
+| Tài nguyên | Link Drive |
+|---|---|
+| 🎵 **Audio (gốc)** | https://drive.google.com/drive/folders/1p13ZWDQsjiMJLUr8qkGelRol1Dj1WLHB |
+| ↳ His Glory | https://drive.google.com/drive/folders/1FatPm9PrP-LmW3qb6bjJUZ4JEyxASoFa |
+| ↳ Session 1 | https://drive.google.com/drive/folders/1VYjQkYgdUyY6RXfmT3bHpKAEdtX8tD5n |
+| ↳ Session 2 | https://drive.google.com/drive/folders/1U9JZW4PRzCYDUk4EOfhX7ROCZ8K6YJK6 |
+| 🎬 **Videos / YouTube** | https://drive.google.com/drive/folders/1rJyZIar3pHQWaWkeGx7bHLkHQbYMVtFe |
+| ↳ YouTube sub | https://drive.google.com/drive/folders/1JX911gFtd1KECi_6YvkHL4LxBb4LFu1c |
+| 🖼️ **BG video music** | https://drive.google.com/drive/folders/1eQnmdO7UNJ3GRSpOccnFdER8tAqwlWWv |
+| 🖼️ **Thumbnails** | https://drive.google.com/drive/folders/1i1te0rM7s16_4fzdtHcswJHON3b_DCix |
+| 📊 **Catalog (JSON)** | https://drive.google.com/drive/folders/1jLiY1GSThkYwQz-WukqRGP_s6ZXrUJvN |
+| 📁 **Plans** | https://drive.google.com/drive/folders/1pN6NfJIXjwa3hWPIJpfoH7GAdaGSLNdo |
+| 📈 **Reports** | https://drive.google.com/drive/folders/1jHJBrUbEbyFWfLtd8s3wDqaXXt64DhgX |
+| 👤 **Subagents (profile)** | https://drive.google.com/drive/folders/1YX3bYroa4tEjme2gSeYgatn2SFHDCn5N |
+| 🎙️ **Elohit (audio phòng thu)** | https://drive.google.com/drive/folders/19qlkyoOQjnp0210_SFgJt8QVAAnc9Ufw |
+| 📝 **Release / YouTube** | https://drive.google.com/drive/folders/19MEOyOMSZLlH0mo3zfUAtmkqnbtpFMuy |
+| 📜 **Lyrics** | https://drive.google.com/drive/folders/1yDaoV9U-j02WMAQNduH0NWTM9QXB9hn3 |
+| 🗺️ **Manifest** | https://drive.google.com/drive/folders/1cVCEbNED7EvtL8Kdiqgrw3RuiZVyCALl |
+| 🖼️ **Images** | https://drive.google.com/drive/folders/1UMZVJKTO807RmQ89ThCpzNOgjYAyME7G |
+| 👀 **Cadence Preview** | https://drive.google.com/drive/folders/1nzuIT6cbZcilh4ocxNdqVU_DjO5Y3VZv |
 
 ### 📊 Thống kê tài sản (local)
 | Loại | Số lượng | Vị trí |
