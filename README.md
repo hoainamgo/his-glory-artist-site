@@ -87,8 +87,21 @@ Tính năng:
 - Audio player nghe thử
 - Video gallery (poster image, do GitHub Pages giới hạn video nặng)
 
-## 🛠️ Quy trình tạo ảnh
-Ảnh thumbnail/avatar được tạo bằng **vilao-image** (Wan2.7-image-pro, Alibaba), phong cách photorealistic, không watermark, không biểu tượng tôn giáo.
+## 🔍 SEO & Release — His Glory
+
+📄 **Kế hoạch SEO:** `SEO_HIS_GLORY.md` — https://drive.google.com/drive/folders/1jLiY1GSThkYwQz-WukqRGP_s6ZXrUJvN (Catalog) · local: `C:\home\Lydia\AI_Music_Project\SEO_HIS_GLORY.md`
+
+| Hạng mục | Link / Vị trí | Trạng thái |
+|---|---|---|
+| 📋 SEO Plan (keywords, tags, template) | `SEO_HIS_GLORY.md` | ✅ Sẵn sàng |
+| 📝 Bài release mẫu (SONG_001) | `Release/YouTube/SONG_001_yt.md` | ✅ 1/10 |
+| 🎬 Video slots (10 bài) | `SEO_HIS_GLORY.md` §YOUTUBE VIDEO SLOTS | 🔜 Chờ thumbnail |
+| 📱 Shorts slots (10 bài) | `SEO_HIS_GLORY.md` §YOUTUBE SHORTS SLOTS | 🔜 Chờ cắt |
+| 📊 **Progress Site** | https://hoainamgo.github.io/ai-music-progress-site/ | 🔗 Theo dõi tiến độ |
+
+🏷️ **Tags chuẩn:** `christian music, victory song, pop anthem, michael archangel, heavenly victory, worship music, inspirational music, ai music, 2026 worship, god elohim`
+
+⚠️ **Cần làm:** viết nốt 9 bài SEO (SONG_002–010) + gen thumbnail SEO chuẩn (1280x720, 4-block) bằng vilao-image.
 
 ## 📜 Bản quyền
 © AI Music Project — All rights reserved.
