@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>His Glory — Artist Collective</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0a0a; --surface:#141414; --border:#262626;
+    --text:#f5f5f5; --muted:#a1a1a1;
+    --accent:linear-gradient(135deg,#6d28d9,#a21caf);
+    --gold:#d4af37;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.5}
+  a{color:inherit;text-decoration:none}
+  img,video{max-width:100%;display:block}
+  nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);background:rgba(10,10,10,0.75);border-bottom:1px solid var(--border)}
+  .nav-inner{max-width:1200px;margin:auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between}
+  .logo{font-weight:900;letter-spacing:-0.02em;background:var(--accent);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .nav-links{display:flex;gap:24px;font-size:14px;color:var(--muted)}
+  .nav-links a:hover{color:var(--text)}
+  section{padding:96px 24px;max-width:1200px;margin:auto}
+  .section-title{font-size:32px;font-weight:700;margin-bottom:40px;letter-spacing:-0.02em}
+  .grid{display:grid;gap:24px}
+  .grid-4{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+  .grid-3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:transform .25s ease,border-color .25s ease}
+  .card:hover{transform:translateY(-4px);border-color:#404040}
+  .card img{width:100%;height:240px;object-fit:cover}
+  .card-body{padding:20px}
+  .card-title{font-weight:700;font-size:18px;margin-bottom:4px}
+  .card-sub{font-size:13px;color:var(--muted)}
+  .badge{display:inline-block;padding:4px 10px;border-radius:999px;font-size:12px;font-weight:600;background:rgba(109,40,217,.15);color:#c4b5fd;border:1px solid rgba(109,40,217,.3)}
+  .hero{padding:128px 24px 96px;text-align:center;background:radial-gradient(1200px 600px at 50% -20%,rgba(109,40,217,.25),transparent 70%)}
+  .hero h1{font-size:clamp(48px,8vw,96px);font-weight:900;letter-spacing:-0.04em;line-height:.95;margin-bottom:16px;background:linear-gradient(to right,#fff,#c4b5fd);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero p{font-size:20px;color:var(--muted);max-width:640px;margin:0 auto 28px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:999px;background:#fff;color:#000;font-weight:700;font-size:14px;border:none;cursor:pointer}
+  .btn.secondary{background:transparent;color:var(--text);border:1px solid var(--border)}
+  .track-row{display:flex;align-items:center;gap:14px;padding:12px 16px;border-radius:12px;transition:background .2s}
+  .track-row:hover{background:rgba(255,255,255,.04)}
+  .track-num{color:var(--muted);font-variant-numeric:tabular-nums;width:24px;text-align:center;font-size:14px}
+  .thumb{width:48px;height:48px;border-radius:8px;object-fit:cover;background:#222}
+  .track-info{flex:1;min-width:0}
+  .track-name{font-weight:600;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .track-meta{font-size:12px;color:var(--muted)}
+  .play{padding:8px;border-radius:50%;background:#fff;color:#000;border:none;cursor:pointer;width:40px;height:40px;display:grid;place-items:center}
+  .video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+  .video-card{position:relative;border-radius:16px;overflow:hidden;background:#000;border:1px solid var(--border);cursor:pointer}
+  .video-card video{width:100%;height:180px;object-fit:cover;opacity:.85;transition:opacity .2s}
+  .video-card:hover video{opacity:1}
+  .video-card .vlabel{position:absolute;left:12px;bottom:12px;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);padding:6px 10px;border-radius:8px;font-size:12px;border:1px solid rgba(255,255,255,.08)}
+  .modal{position:fixed;inset:0;background:rgba(0,0,0,.85);backdrop-filter:blur(10px);display:none;align-items:center;justify-content:center;z-index:100;padding:24px}
+  .modal.open{display:flex}
+  .modal video{max-width:min(1000px,90vw);max-height:80vh;border-radius:12px;border:1px solid var(--border);background:#000}
+  .player-bar{position:fixed;bottom:0;left:0;right:0;background:rgba(20,20,20,.95);backdrop-filter:blur(12px);border-top:1px solid var(--border);padding:12px 24px;display:none;align-items:center;gap:14px;z-index:60}
+  .player-bar.show{display:flex}
+  .player-bar audio{flex:1;height:36px}
+  footer{border-top:1px solid var(--border);padding:40px 24px;text-align:center;color:var(--muted);font-size:13px}
+  @media(max-width:720px){.grid-4{grid-template-columns:1fr 1fr}.hero{padding:100px 20px 72px}.section-title{font-size:26px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="logo">HIS GLORY</div>
+    <div class="nav-links">
+      <a href="#artists">Artists</a>
+      <a href="#albums">Albums</a>
+      <a href="#tracks">Tracks</a>
+      <a href="#videos">Videos</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <h1>His Glory</h1>
+  <p>A sacred music collective · Modern worship · Timeless truth</p>
+  <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+    <a class="btn" href="#tracks">Listen now</a>
+    <a class="btn secondary" href="#albums">Explore albums</a>
+  </div>
+</header>
+
+<section id="artists">
+  <h2 class="section-title">The Collective</h2>
+  <div class="grid grid-4">
+    <div class="card">
+      <img src="./Melody.png" alt="Melody">
+      <div class="card-body">
+        <div class="card-title">Melody</div>
+        <div class="card-sub">Sacred vocalist · Songwriter</div>
+        <p style="margin-top:10px;font-size:13px;color:var(--muted)">Female lead voice. Writes from prayer, sings from encounter.</p>
+        <div style="margin-top:12px"><span class="badge">Vocals</span> <span class="badge">Songwriting</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="./Noah.png" alt="Noah">
+      <div class="card-body">
+        <div class="card-title">Noah</div>
+        <div class="card-sub">Vocalist · Worship leader</div>
+        <p style="margin-top:10px;font-size:13px;color:var(--muted)">Male lead voice. Carries truth through tone and presence.</p>
+        <div style="margin-top:12px"><span class="badge">Vocals</span> <span class="badge">Guitar</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="./Harmony.png" alt="Harmony">
+      <div class="card-body">
+        <div class="card-title">Harmony</div>
+        <div class="card-sub">Editor · Vocal arranger</div>
+        <p style="margin-top:10px;font-size:13px;color:var(--muted)">Gold-standard refiner. Shapes arrangements with precision and reverence.</p>
+        <div style="margin-top:12px"><span class="badge">Production</span> <span class="badge">Arrangement</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="./Cadence.png" alt="Cadence">
+      <div class="card-body">
+        <div class="card-title">Cadence</div>
+        <div class="card-sub">Actress · Vocalist</div>
+        <p style="margin-top:10px;font-size:13px;color:var(--muted)">Twin sister of Melody. A rare voice that surprises the room.</p>
+        <div style="margin-top:12px"><span class="badge">Vocals</span> <span class="badge">Acting</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="albums">
+  <h2 class="section-title">Albums & Sessions</h2>
+  <div class="grid grid-3">
+    <div class="card">
+      <img src="./Thumbnails/thumb_hg_01_nano.jpeg" alt="His Glory">
+      <div class="card-body">
+        <div class="card-title">His Glory</div>
+        <div class="card-sub">Victory Collection · 10 tracks</div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="./Thumbnails/thumb_s2_01_nano.jpeg" alt="Session 2">
+      <div class="card-body">
+        <div class="card-title">Session 2</div>
+        <div class="card-sub">Melody v2 · 10 tracks</div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://ui-avatars.com/api/?name=PM&background=6d28d9&color=fff" alt="Parenting Music">
+      <div class="card-body">
+        <div class="card-title">Parenting Music</div>
+        <div class="card-sub">S01 · Healing & Love</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tracks">
+  <h2 class="section-title">Latest Tracks</h2>
+  <div class="grid" style="grid-template-columns:1fr">
+    <div class="track-row">
+      <div class="track-num">01</div>
+      <img class="thumb" src="./Thumbnails/thumb_hg_01_nano.jpeg" alt="">
+      <div class="track-info"><div class="track-name">The Dragon Falls</div><div class="track-meta">His Glory · Melody / Noah</div></div>
+      <button class="play" onclick="playTrack('./Audio/his_glory/song_01_the_dragon_falls.mp3',this)">▶</button>
+    </div>
+    <div class="track-row">
+      <div class="track-num">02</div>
+      <img class="thumb" src="./Thumbnails/thumb_hg_02_nano.jpeg" alt="">
+      <div class="track-info"><div class="track-name">Worthy The Name</div><div class="track-meta">His Glory · Melody</div></div>
+      <button class="play" onclick="playTrack('./Audio/his_glory/song_02_worthy_the_name.mp3',this)">▶</button>
+    </div>
+    <div class="track-row">
+      <div class="track-num">03</div>
+      <img class="thumb" src="./Thumbnails/thumb_hg_03_nano.jpeg" alt="">
+      <div class="track-info"><div class="track-name">Glory Everlasting</div><div class="track-meta">His Glory · Melody</div></div>
+      <button class="play" onclick="playTrack('./Audio/his_glory/song_10_glory_everlasting.mp3',this)">▶</button>
+    </div>
+    <div class="track-row">
+      <div class="track-num">04</div>
+      <img class="thumb" src="./Thumbnails/thumb_s2_01_nano.jpeg" alt="">
+      <div class="track-info"><div class="track-name">First Words</div><div class="track-meta">Session 01 · Healing</div></div>
+      <button class="play" onclick="playTrack('./Audio/session1/PM_S01_Healing_01_FirstWords.mp3',this)">▶</button>
+    </div>
+    <div class="track-row">
+      <div class="track-num">05</div>
+      <img class="thumb" src="./Thumbnails/thumb_s2_01_nano.jpeg" alt="">
+      <div class="track-info"><div class="track-name">Coffee Before Words</div><div class="track-meta">Healing Ground</div></div>
+      <button class="play" onclick="playTrack('./Audio/session2/PM_S01_Healing_01_CoffeeBeforeWords.mp3',this)">▶</button>
+    </div>
+  </div>
+</section>
+
+<section id="videos">
+  <h2 class="section-title">Videos</h2>
+  <div class="video-grid">
+    <div class="video-card" onclick="openVideo('./Videos/PM_S01_Demo_01_Pilot_16x9.mp4')">
+      <video src="./Videos/PM_S01_Demo_01_Pilot_16x9.mp4" muted></video>
+      <div class="vlabel">Demo Pilot</div>
+    </div>
+    <div class="video-card" onclick="openVideo('./Videos/PM_S01_Healing_01_FirstWords_v5fx.mp4')">
+      <video src="./Videos/PM_S01_Healing_01_FirstWords_v5fx.mp4" muted></video>
+      <div class="vlabel">First Words v5fx</div>
+    </div>
+    <div class="video-card" onclick="openVideo('./Videos/PM_S01_Sacred_01_TheDragonFalls_v5.mp4')">
+      <video src="./Videos/PM_S01_Sacred_01_TheDragonFalls_v5.mp4" muted></video>
+      <div class="vlabel">The Dragon Falls v5</div>
+    </div>
+    <div class="video-card" onclick="openVideo('./bg-video-music/bg_sacred_dragon-falls.mp4')">
+      <video src="./bg-video-music/bg_sacred_dragon-falls.mp4" muted></video>
+      <div class="vlabel">BG · Dragon Falls</div>
+    </div>
+  </div>
+</section>
+
+<div class="modal" id="videoModal" onclick="closeVideo()">
+  <video id="modalVideo" controls autoplay></video>
+</div>
+
+<div class="player-bar" id="playerBar">
+  <button class="play" onclick="togglePlay()" id="barPlay">▶</button>
+  <div style="flex:1;min-width:0">
+    <div id="barTitle" style="font-weight:600;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">—</div>
+    <audio id="audio" controls style="width:100%;height:36px"></audio>
+  </div>
+  <button class="play" onclick="closePlayer()" style="background:transparent;color:#fff;border:1px solid var(--border)">✕</button>
+</div>
+
+<footer>
+  His Glory · Parenting Music · All rights reserved · Built with ❤️
+</footer>
+
+<script>
+  const audio=document.getElementById('audio');
+  const bar=document.getElementById('playerBar');
+  const modal=document.getElementById('videoModal');
+  const mv=document.getElementById('modalVideo');
+  function playTrack(src,btn){
+    audio.src=src;
+    bar.classList.add('show');
+    document.getElementById('barTitle').textContent=btn.parentElement.querySelector('.track-name').textContent;
+    audio.play();
+  }
+  function togglePlay(){audio.paused?audio.play():audio.pause();document.getElementById('barPlay').textContent=audio.paused?'▶':'❚❚'}
+  function closePlayer(){audio.pause();bar.classList.remove('show');audio.src=''}
+  function openVideo(src){mv.src=src;modal.classList.add('show');mv.play()}
+  function closeVideo(){modal.classList.remove('show');mv.pause();mv.src=''}
+  document.querySelectorAll('.video-card video').forEach(v=>{v.addEventListener('mouseenter',()=>v.play());v.addEventListener('mouseleave',()=>{v.pause();v.currentTime=0})});
+  audio.addEventListener('play',()=>document.getElementById('barPlay').textContent='❚❚');
+  audio.addEventListener('pause',()=>document.getElementById('barPlay').textContent='▶');
+</script>
+
+</body>
+</html>
