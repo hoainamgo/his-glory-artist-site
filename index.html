@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>His Glory — Artist</title>
+<title>His Glory — Artist Collective</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif);-webkit-font-smoothing:antialiased;line-height:1.55}
+  body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.55}
   a{color:inherit;text-decoration:none}
   img{max-width:100%;display:block}
   .container{max-width:1180px;margin:0 auto;padding:0 24px}
@@ -38,28 +38,31 @@
   .hero h1 span{background:linear-gradient(135deg,var(--purple),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
   .hero p{color:var(--muted);max-width:580px;margin:0 auto 30px;font-size:20px;line-height:1.55}
   .actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-  .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:999px;background:linear-gradient(135deg,var(--purple),var(--accent));color:#fff;font-weight:700;transition:.25s;border:none}
-  .btn:hover{transform:translateY(-1px);box-shadow:0 12px 36px rgba(124,58,237,.35)}
-  .btn.ghost{background:transparent;border:1px solid var(--border);color:var(--text)}
 
   /* sections */
   section{padding:100px 0;border-top:1px solid var(--border)}
   .section-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:42px}
   .section-head h2{font-size:44px;font-weight:800;letter-spacing:-.02em;line-height:1;margin:0}
+  .section-head h2 span{color:var(--gold)}
   .section-head p{color:var(--muted);max-width:520px;margin:0;font-size:16px}
   .section-num{font-variant-numeric:tabular-nums;color:var(--gold);font-weight:800}
 
   .grid{display:grid;gap:22px}
-  .grid.3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+  .grid.4{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
   .grid.2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
 
-  .card{background:var(--surface);border:1px solid var(--border);border-radius:18px;overflow:hidden;transition:.25s}
-  .card:hover{border-color:#3a3a3a;transform:translateY(-2px)}
-  .card .media{position:relative;aspect-ratio:16/9;background:linear-gradient(135deg,#12121a,#1a1225)}
-  .card .body{padding:20px}
-  .card .title{font-weight:700;margin-bottom:6px;font-size:18px}
-  .card .meta{color:var(--muted);font-size:14px}
+  /* artist card */
+  .artist{background:var(--surface);border:1px solid var(--border);border-radius:22px;overflow:hidden;transition:.25s}
+  .artist:hover{border-color:#3a3a3a;transform:translateY(-2px)}
+  .artist .face{position:relative;aspect-ratio:3/4;background:linear-gradient(160deg,#12121a,#1e1628)}
+  .artist .body{padding:22px}
+  .artist .name{font-size:22px;font-weight:800;margin-bottom:4px}
+  .artist .role{color:var(--muted);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.12em;margin-bottom:10px}
+  .artist .blurb{color:var(--muted);font-size:14px;line-height:1.6;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+  .artist .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+  .tag{padding:6px 10px;border-radius:999px;background:#0f0f11;border:1px solid var(--border);color:var(--muted);font-size:12px;font-weight:600}
 
+  /* track */
   .track{display:grid;grid-template-columns:64px 1fr auto;gap:16px;align-items:center;padding:14px 16px;border-radius:14px;background:var(--surface);border:1px solid var(--border);transition:.25s}
   .track:hover{border-color:#3a3a3a}
   .track .thumb{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--purple),var(--accent))}
@@ -67,18 +70,16 @@
   .track .info p{margin:0;color:var(--muted);font-size:13px}
   .play{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--purple),var(--accent));color:#fff;font-size:12px}
 
-  .event{display:grid;grid-template-columns:140px 1fr auto;gap:22px;align-items:center;padding:20px;border-radius:16px;background:var(--surface);border:1px solid var(--border);transition:.2s}
-  .event:hover{border-color:#3a3a3a}
+  /* events */
+  .event{display:grid;grid-template-columns:140px 1fr auto;gap:22px;align-items:center;padding:20px;border-radius:16px;background:var(--surface);border:1px solid var(--border)}
   .date{text-align:center;padding:12px 14px;border-radius:12px;background:#0f0f11;border:1px solid var(--border)}
   .date b{display:block;font-size:26px;font-weight:900;background:linear-gradient(180deg,var(--gold),#b8860b);-webkit-background-clip:text;background-clip:text;color:transparent}
   .date span{color:var(--muted);font-size:13px;font-weight:600}
 
-  .newsletter{background:linear-gradient(135deg,rgba(124,58,237,.12),rgba(162,28,175,.12));border:1px solid var(--border);border-radius:22px;padding:44px;text-align:center}
-  .newsletter h3{margin:0 0 10px;font-size:30px;font-weight:800}
-  .newsletter p{color:var(--muted);margin:0 auto 24px;max-width:520px}
-  .field{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-  .field input{padding:15px 18px;border-radius:999px;border:1px solid var(--border);background:#0f0f11;color:var(--text);min-width:280px;font-size:15px}
-  .field button{padding:15px 22px;border-radius:999px;border:none;background:linear-gradient(135deg,var(--purple),var(--accent));color:#fff;font-weight:700;font-size:15px}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:999px;background:linear-gradient(135deg,var(--purple),var(--accent));color:#fff;font-weight:700;transition:.2s;border:none}
+  .btn:hover{transform:translateY(-1px);box-shadow:0 12px 36px rgba(124,58,237,.35)}
+
+  .divider{height:1px;background:linear-gradient(to right,transparent,var(--border),transparent)}
 
   footer{border-top:1px solid var(--border);padding:48px 0;color:var(--muted);font-size:14px;text-align:center}
   .socials{display:flex;gap:18px;justify-content:center;margin-bottom:16px}
@@ -88,7 +89,6 @@
   @media (max-width:720px){
     .section-head{flex-direction:column;align-items:flex-start}
     .event{grid-template-columns:1fr}
-    .track{grid-template-columns:56px 1fr}
     .nav{display:none}
   }
 </style>
@@ -97,6 +97,7 @@
   <nav class="topbar">
     <a href="#" class="brand"><span class="brand__mark"></span><span class="brand__name">HIS GLORY</span></a>
     <div class="nav">
+      <a class="nav__item" href="#artists">Artists</a>
       <a class="nav__item" href="#music">Music</a>
       <a class="nav__item" href="#videos">Videos</a>
       <a class="nav__item" href="#events">Events</a>
@@ -106,45 +107,97 @@
 
   <header class="hero">
     <div class="hero-content">
-      <span class="eyebrow">Worship • Faith • Sound</span>
+      <span class="eyebrow">Victory Collection</span>
       <h1>His <span>Glory</span></h1>
-      <p>A sacred soundscape of faith, hope, and melody. Experience worship reimagined.</p>
+      <p>A sacred soundscape of faith, hope, and melody. Meet the voices behind the collection.</p>
       <div class="actions">
         <a href="#music" class="btn">Listen Now</a>
-        <a href="#events" class="btn ghost">Upcoming Shows</a>
+        <a href="#artists" class="btn" style="background:linear-gradient(135deg,#262626,#1a1a1a);border:1px solid var(--border)">Meet the Artists</a>
       </div>
     </div>
   </header>
 
+  <section id="artists">
+    <div class="container">
+      <div class="section-head">
+        <div><div class="eyebrow">The Collective</div><h2><span class="section-num">01</span> Artists</h2></div>
+        <p>Four voices. One message. Each artist brings a different gift to the same calling.</p>
+      </div>
+      <div class="grid 4">
+        <div class="artist">
+          <div class="face"></div>
+          <div class="body">
+            <div class="name">Melody</div>
+            <div class="role">Female Lead • Vocals / Songwriter</div>
+            <div class="blurb">Professional sacred vocalist and worship leader. Her craft is not a side project — it is her life. Every song is born from prayer, every note is offered.</div>
+            <div class="tags"><span class="tag">Contralto</span><span class="tag">Songwriter</span><span class="tag">Worship Leader</span></div>
+          </div>
+        </div>
+        <div class="artist">
+          <div class="face"></div>
+          <div class="body">
+            <div class="name">Noah</div>
+            <div class="role">Male Lead • Vocals</div>
+            <div class="blurb">Warm, textured baritone with presence. He does not perform; he carries the message through tone and phrasing. His voice changes the room.</div>
+            <div class="tags"><span class="tag">Baritone</span><span class="tag">Worship Leader</span><span class="tag">Session Vocalist</span></div>
+          </div>
+        </div>
+        <div class="artist">
+          <div class="face"></div>
+          <div class="body">
+            <div class="name">Harmony</div>
+            <div class="role">Editor • Vocal Arranger</div>
+            <div class="blurb">Gold-standard sacred music editor. She hears what is missing and makes it right. Every edit is precise; every arrangement gains depth without weight.</div>
+            <div class="tags"><span class="tag">Alto</span><span class="tag">Arranger</span><span class="tag">Producer</span></div>
+          </div>
+        </div>
+        <div class="artist">
+          <div class="face"></div>
+          <div class="body">
+            <div class="name">Cadence</div>
+            <div class="role">Guest Vocalist • Actress</div>
+            <div class="blurb">Melody’s twin sister and occasional duet partner. A versatile soprano who appears when the music needs her, then moves on. Freedom in motion.</div>
+            <div class="tags"><span class="tag">Soprano</span><span class="tag">Actress</span><span class="tag">Duet Partner</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
   <section id="music">
     <div class="container">
       <div class="section-head">
-        <div>
-          <div class="eyebrow">Discography</div>
-          <h2><span class="section-num">01</span> Latest Releases</h2>
-        </div>
+        <div><div class="eyebrow">Discography</div><h2><span class="section-num">02</span> Latest Releases</h2></div>
         <p>Stream the newest sound — crafted for reflection and celebration.</p>
       </div>
       <div class="grid 3">
-        <div class="card">
-          <div class="media"></div>
+        <div class="artist">
+          <div class="face"></div>
           <div class="body">
-            <div class="title">Grace Abounds</div>
-            <div class="meta">Single • 2025</div>
+            <div class="name">Glory Everlasting</div>
+            <div class="role">Closing Anthem • Revelation 12:10-12</div>
+            <div class="blurb">The declaration that closes the collection — full voice, unshaken faith.</div>
+            <div class="tags"><span class="tag">Full Band</span><span class="tag">Melody Lead</span></div>
           </div>
         </div>
-        <div class="card">
-          <div class="media"></div>
+        <div class="artist">
+          <div class="face"></div>
           <div class="body">
-            <div class="title">Path of Light</div>
-            <div class="meta">EP • 2025</div>
+            <div class="name">The Giant Fell</div>
+            <div class="role">Signature Anthem</div>
+            <div class="blurb">A driving worship anthem about facing fear and moving forward.</div>
+            <div class="tags"><span class="tag">Noah Lead</span><span class="tag">Full Band</span></div>
           </div>
         </div>
-        <div class="card">
-          <div class="media"></div>
+        <div class="artist">
+          <div class="face"></div>
           <div class="body">
-            <div class="title">Kingdom Come</div>
-            <div class="meta">Album • 2024</div>
+            <div class="name">Unscripted</div>
+            <div class="role">Duet • Melody & Cadence</div>
+            <div class="blurb">Two sisters, two gifts, one God, different paths — sung together for the first time.</div>
+            <div class="tags"><span class="tag">Duet</span><span class="tag">Sisters</span></div>
           </div>
         </div>
       </div>
@@ -152,38 +205,36 @@
       <div style="margin-top:56px">
         <h3 style="margin:0 0 18px;font-size:22px;font-weight:800">Popular Tracks</h3>
         <div class="grid" style="grid-template-columns:1fr;gap:12px">
-          <div class="track"><div class="thumb"></div><div class="info"><h4>Grace Abounds</h4><p>Single • 2025</p></div><div class="play">▶</div></div>
-          <div class="track"><div class="thumb"></div><div class="info"><h4>Path of Light</h4><p>EP • 2025</p></div><div class="play">▶</div></div>
-          <div class="track"><div class="thumb"></div><div class="info"><h4>Kingdom Come</h4><p>Album • 2024</p></div><div class="play">▶</div></div>
-          <div class="track"><div class="thumb"></div><div class="info"><h4>Still Waters</h4><p>Album • 2024</p></div><div class="play">▶</div></div>
+          <div class="track"><div class="thumb"></div><div class="info"><h4>Glory Everlasting</h4><p>Closing Anthem • Revelation</p></div><div class="play">▶</div></div>
+          <div class="track"><div class="thumb"></div><div class="info"><h4>The Giant Fell</h4><p>Signature Anthem</p></div><div class="play">▶</div></div>
+          <div class="track"><div class="thumb"></div><div class="info"><h4>Sound the Trumpet</h4><p>Duet • 1 Corinthians 15:52</p></div><div class="play">▶</div></div>
+          <div class="track"><div class="thumb"></div><div class="info"><h4>Shepherd</h4><p>Acoustic Ballad • Psalm 23</p></div><div class="play">▶</div></div>
         </div>
       </div>
     </div>
   </section>
+
+  <div class="divider"></div>
 
   <section id="videos">
     <div class="container">
       <div class="section-head">
-        <div>
-          <div class="eyebrow">Watch</div>
-          <h2><span class="section-num">02</span> Videos</h2>
-        </div>
-        <p>Official videos, live performances, and behind the scenes.</p>
+        <div><div class="eyebrow">Watch</div><h2><span class="section-num">03</span> Videos</h2></div>
+        <p>Official videos, studio sessions, and behind the scenes.</p>
       </div>
       <div class="grid 2">
-        <div class="card"><div class="media"></div><div class="body"><div class="title">Grace Abounds (Official)</div><div class="meta">YouTube • 4:12</div></div></div>
-        <div class="card"><div class="media"></div><div class="body"><div class="title">Live at the Hall</div><div class="meta">YouTube • 12:30</div></div></div>
+        <div class="artist"><div class="face"></div><div class="body"><div class="name">Glory Everlasting (Official)</div><div class="role">YouTube • 4:12</div></div></div>
+        <div class="artist"><div class="face"></div><div class="body"><div class="name">Studio Session — The Giant Fell</div><div class="role">YouTube • 12:30</div></div></div>
       </div>
     </div>
   </section>
 
+  <div class="divider"></div>
+
   <section id="events">
     <div class="container">
       <div class="section-head">
-        <div>
-          <div class="eyebrow">On Tour</div>
-          <h2><span class="section-num">03</span> Events</h2>
-        </div>
+        <div><div class="eyebrow">On Tour</div><h2><span class="section-num">04</span> Events</h2></div>
         <p>Catch Him live — worship nights, concerts, and gatherings.</p>
       </div>
       <div class="grid" style="grid-template-columns:1fr;gap:14px">
@@ -206,15 +257,17 @@
     </div>
   </section>
 
+  <div class="divider"></div>
+
   <section id="contact">
     <div class="container">
-      <div class="newsletter">
-        <h3>Stay in the loop</h3>
-        <p>New music, tour dates, and stories — straight to your inbox.</p>
-        <div class="field">
-          <input type="email" placeholder="you@example.com">
-          <button>Subscribe</button>
-        </div>
+      <div class="section-head">
+        <div><div class="eyebrow">Connect</div><h2><span class="section-num">05</span> Contact</h2></div>
+        <p>For bookings, collaborations, and inquiries.</p>
+      </div>
+      <div style="max-width:520px;margin:0 auto;text-align:center">
+        <p style="color:var(--muted);margin-bottom:18px">Reach the His Glory collective for events, media, and ministry partnerships.</p>
+        <a class="btn" href="mailto:hello@hisglory.art">Email the Team</a>
       </div>
     </div>
   </section>
