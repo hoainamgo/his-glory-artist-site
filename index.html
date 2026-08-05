@@ -67,6 +67,42 @@
   .artist .blurb{color:var(--muted);font-size:13px;line-height:1.55;margin-bottom:14px;background:rgba(0,0,0,.25);padding:10px 12px;border-radius:10px;border-left:3px solid var(--purple)}
   .artist .tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto}
   .tag{padding:4px 10px;border-radius:999px;background:#0f0f11;border:1px solid var(--border);color:var(--muted);font-size:11px;font-weight:600}
+  .artist-cta{display:block;width:100%;margin-top:14px;padding:10px;border-radius:12px;border:1px solid rgba(124,58,237,.35);background:transparent;color:var(--purple);font-size:13px;font-weight:700;cursor:pointer;transition:.2s;letter-spacing:.04em;text-align:center}
+  .artist-cta:hover{background:rgba(124,58,237,.12);border-color:var(--purple);color:#fff;}
+
+  /* ── Artist Modal ─────────────────────────────────────────────── */
+  .amodal-backdrop{position:fixed;inset:0;z-index:9000;background:rgba(0,0,0,.78);backdrop-filter:blur(14px);display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .3s ease}
+  .amodal-backdrop.open{opacity:1;pointer-events:auto}
+  .amodal{background:linear-gradient(145deg,#16141f,#0e0c17);border:1px solid rgba(124,58,237,.25);border-radius:28px;max-width:760px;width:100%;max-height:90vh;overflow-y:auto;padding:0;box-shadow:0 40px 120px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.04);transform:translateY(24px) scale(.97);transition:transform .35s cubic-bezier(.34,1.56,.64,1),opacity .3s ease;scrollbar-width:thin;scrollbar-color:rgba(124,58,237,.4) transparent}
+  .amodal-backdrop.open .amodal{transform:translateY(0) scale(1)}
+  .amodal-hero{display:flex;gap:28px;align-items:center;padding:36px 36px 24px;border-bottom:1px solid rgba(255,255,255,.06);background:radial-gradient(ellipse at 30% 0%,rgba(124,58,237,.18),transparent 60%)}
+  .amodal-portrait{width:110px;height:110px;border-radius:50%;border:3px solid var(--gold);box-shadow:0 0 40px rgba(212,175,55,.3);background-size:cover;background-position:center top;flex-shrink:0}
+  .amodal-identity h2{font-size:32px;font-weight:900;letter-spacing:-.02em;margin:0 0 4px;color:#fff}
+  .amodal-identity .amodal-role{color:var(--gold);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;margin-bottom:12px}
+  .amodal-identity .amodal-meta{display:flex;gap:10px;flex-wrap:wrap}
+  .amodal-badge{padding:4px 12px;border-radius:999px;font-size:11px;font-weight:700;background:rgba(124,58,237,.18);border:1px solid rgba(124,58,237,.35);color:#c4b5fd}
+  .amodal-close{position:absolute;top:18px;right:22px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:var(--muted);border-radius:50%;width:36px;height:36px;display:grid;place-items:center;cursor:pointer;font-size:18px;transition:.2s;z-index:10}
+  .amodal-close:hover{background:rgba(255,255,255,.12);color:#fff}
+  .amodal-body{padding:28px 36px 36px;display:grid;gap:28px}
+  .amodal-section h4{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.18em;color:var(--purple);margin:0 0 12px}
+  .amodal-section p{color:#c8c8d4;font-size:15px;line-height:1.7;margin:0}
+  .amodal-quote{border-left:3px solid var(--gold);padding:14px 18px;background:rgba(212,175,55,.07);border-radius:0 12px 12px 0;font-style:italic;color:#e8ddb5;font-size:15px;line-height:1.65}
+  .amodal-songs{display:flex;flex-direction:column;gap:8px}
+  .amodal-song{display:flex;align-items:center;gap:12px;padding:10px 14px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:10px;transition:.2s}
+  .amodal-song:hover{background:rgba(124,58,237,.1);border-color:rgba(124,58,237,.3)}
+  .amodal-song-num{width:24px;height:24px;border-radius:50%;background:rgba(124,58,237,.25);display:grid;place-items:center;font-size:11px;font-weight:800;color:#c4b5fd;flex-shrink:0}
+  .amodal-song-title{font-size:14px;font-weight:600;color:#e8e8f0}
+  .amodal-themes{display:flex;flex-wrap:wrap;gap:8px}
+  .amodal-theme{padding:5px 13px;border-radius:999px;font-size:12px;font-weight:600;background:rgba(162,28,175,.15);border:1px solid rgba(162,28,175,.3);color:#e879f9}
+  .amodal-sig{background:linear-gradient(135deg,rgba(212,175,55,.12),rgba(124,58,237,.12));border:1px solid rgba(212,175,55,.25);border-radius:16px;padding:18px 20px;display:flex;align-items:flex-start;gap:14px}
+  .amodal-sig-icon{font-size:26px;flex-shrink:0}
+  .amodal-sig-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--gold);margin-bottom:4px}
+  .amodal-sig-title{font-size:15px;font-weight:700;color:#fff}
+  @media(max-width:640px){
+    .amodal-hero{flex-direction:column;text-align:center;align-items:center;padding:28px 20px 20px}
+    .amodal-identity .amodal-meta{justify-content:center}
+    .amodal-body{padding:20px 20px 28px}
+  }
 
   /* track */
   .track{display:grid;grid-template-columns:64px 1fr auto;gap:16px;align-items:center;padding:14px 16px;border-radius:14px;background:var(--surface);border:1px solid var(--border);transition:.25s}
@@ -170,6 +206,7 @@
             </div>
             <div class="blurb">Female lead voice composing from prayer and spiritual encounter. Every song is born from quiet worship and total devotion.</div>
             <div class="tags"><span class="tag">Contralto</span><span class="tag">Songwriter</span><span class="tag">Lead Voice</span></div>
+            <button class="artist-cta" onclick="openArtistModal('melody')">✦ Meet Melody</button>
           </div>
         </div>
         <!-- Noah -->
@@ -187,6 +224,7 @@
             </div>
             <div class="blurb">Deep, resonant male lead voice. Carries truth with precision, delivering powerful victory anthems with quiet strength.</div>
             <div class="tags"><span class="tag">Baritone</span><span class="tag">Worship Leader</span><span class="tag">Male Lead</span></div>
+            <button class="artist-cta" onclick="openArtistModal('noah')">✦ Meet Noah</button>
           </div>
         </div>
         <!-- Harmony -->
@@ -204,6 +242,7 @@
             </div>
             <div class="blurb">Gold-standard sacred editor. Refines every lyric, arrangement, and harmony until only pure essential truth remains.</div>
             <div class="tags"><span class="tag">Gold-Standard Editor</span><span class="tag">Arranger</span><span class="tag">Alto</span></div>
+            <button class="artist-cta" onclick="openArtistModal('harmony')">✦ Meet Harmony</button>
           </div>
         </div>
         <!-- Cadence -->
@@ -221,11 +260,64 @@
             </div>
             <div class="blurb">Versatile actress and guest vocalist. Represents freedom and faith in motion, sharing Melody's voice with a different path.</div>
             <div class="tags"><span class="tag">Soprano</span><span class="tag">Actress</span><span class="tag">Twin Sister</span></div>
+            <button class="artist-cta" onclick="openArtistModal('cadence')">✦ Meet Cadence</button>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- ══ ARTIST MODALS ══════════════════════════════════════════════ -->
+  <div class="amodal-backdrop" id="artist-modal" role="dialog" aria-modal="true">
+    <div class="amodal" id="amodal-panel" style="position:relative">
+      <button class="amodal-close" id="amodal-close" aria-label="Close">✕</button>
+      <!-- Hero -->
+      <div class="amodal-hero">
+        <div class="amodal-portrait" id="am-portrait"></div>
+        <div class="amodal-identity">
+          <h2 id="am-name"></h2>
+          <div class="amodal-role" id="am-role"></div>
+          <div class="amodal-meta" id="am-meta"></div>
+        </div>
+      </div>
+      <!-- Body -->
+      <div class="amodal-body">
+        <!-- Occupation / Who they are -->
+        <div class="amodal-section">
+          <h4>Who They Are</h4>
+          <p id="am-who"></p>
+        </div>
+        <!-- Signature song -->
+        <div class="amodal-sig" id="am-sig-wrap">
+          <div class="amodal-sig-icon">🎵</div>
+          <div>
+            <div class="amodal-sig-label">Signature Song</div>
+            <div class="amodal-sig-title" id="am-sig"></div>
+          </div>
+        </div>
+        <!-- Faith -->
+        <div class="amodal-section">
+          <h4>Faith & Conviction</h4>
+          <div class="amodal-quote" id="am-faith"></div>
+        </div>
+        <!-- Composed Songs -->
+        <div class="amodal-section">
+          <h4>Songs in His Glory Collection</h4>
+          <div class="amodal-songs" id="am-songs"></div>
+        </div>
+        <!-- Themes -->
+        <div class="amodal-section">
+          <h4>Song Themes</h4>
+          <div class="amodal-themes" id="am-themes"></div>
+        </div>
+        <!-- Conviction quote -->
+        <div class="amodal-section">
+          <h4>Her Conviction</h4>
+          <div class="amodal-quote" id="am-conviction"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="divider"></div>
 
@@ -434,6 +526,121 @@
         ]
       });
     }
+
+    // ── Artist Modal Data (from JSON profiles) ──────────────────────────
+    var ARTISTS = {
+      melody: {
+        name: 'Melody',
+        role: 'Female Lead Vocalist & Songwriter',
+        image: './images/melody.jpg',
+        age: 'Late 20s',
+        era: 'Modern Day, 21st Century',
+        voiceTypes: ['Natural Female Contralto', 'Crystalline Upper Register', 'Intimate Ballad Voice'],
+        who: 'Professional sacred vocalist, songwriter, and worship leader. The female lead voice of the His Glory collection. She writes and records full-time; her craft is not a side project — it is her life. Every song she writes is born from prayer, every note she sings is offered, every studio session is worship.',
+        signatureSong: 'Glory Everlasting — the closing anthem of the His Glory collection, a declaration of faith sung with full heart and unwavering voice.',
+        faithConfession: '"God Elohim (Rules) — the living God, Father of my soul. I write because He gives the words. I sing because the voice is His. I hold nothing back — not in the studio, not on stage, not in the quiet. Every song is an offering; every note is obedience."',
+        conviction: 'She believes a song is not a product — it is a testimony. A lyric written carelessly is a truth half-told; a note sung without conviction is a prayer half-prayed. She trains her ear, disciplines her craft, and submits her talent to something higher than herself. The microphone is not a mirror; it is a vessel.',
+        songs: ['Worthy the Name (Revelation 5:12)', 'Heaven\'s Host (Revelation 5:11)', 'Stand Firm (Ephesians 6:13)', 'Sound the Trumpet (1 Corinthians 15:52, duet with Noah)', 'Glory Everlasting (Revelation 12:10-12, closing anthem)'],
+        themes: ['Devotion', 'Wholehearted Offering', 'Victory', 'Faith Through Song', 'God Elohim (Rules)', 'The Weight of a Word', 'Writing as Prayer']
+      },
+      noah: {
+        name: 'Noah',
+        role: 'Male Lead Vocalist & Worship Leader',
+        image: './images/noah.jpg',
+        age: 'Late 20s',
+        era: 'Modern Day, 21st Century',
+        voiceTypes: ['Warm Male Baritone', 'Powerful Belt (live worship)', 'Intimate Ballad Voice'],
+        who: 'Professional sacred vocalist and worship leader. The male lead voice of the His Glory collection. He works as a recording artist, session vocalist, and live worship leader. His craft is singing — not performing, but carrying a message through tone, phrasing, and presence.',
+        signatureSong: 'The Giant Fell — a driving worship anthem about facing fear and moving forward, the signature song of the His Glory collection.',
+        faithConfession: '"God Elohim (Rules) — the living God, Father of my soul. My voice is not mine alone; it is given to carry truth. I will not waste it on what is not real. I sing because He is worthy; I lead because He called; I hold nothing back."',
+        conviction: 'He believes the voice is stewardship — a gift that demands discipline, honesty, and surrender. A note sung carelessly is a gift unwrapped badly. He trains daily, rests carefully, and sings only what he believes. The mic is not a throne; it is an altar.',
+        songs: ['The Giant Fell (signature anthem, full band)', 'Shepherd (Psalm 23, acoustic ballad)', 'Still Standing (Ephesians 6:13, mid-tempo)', 'Sound the Trumpet (1 Corinthians 15:52, duet with Melody)', 'Victory (Revelation 12:10-12, full band closing)'],
+        themes: ['Courage', 'Stewardship of Voice', 'Victory', 'Worship as Surrender and Strength', 'God Elohim (Rules)', 'Truth Without Apology', 'The Weight of a Song']
+      },
+      harmony: {
+        name: 'Harmony',
+        role: 'Gold-Standard Music Editor & Arranger',
+        image: './images/harmony.jpg',
+        age: 'Mid 30s',
+        era: 'Modern Day, 21st Century',
+        voiceTypes: ['Low Female Alto (studio voice only)', 'Measured Spoken Word', 'Ensemble (rare — when she sings, it is precise)'],
+        who: 'Gold-standard sacred music editor and vocal arranger. The one producers call when a project must be flawless. She hears what is missing, what is excess, and what is almost right but not yet. Every lyric she touches becomes cleaner; every arrangement she shapes gains depth without weight.',
+        signatureSong: 'Gold Standard — an instrumental interlude she composed for the collection, a meditation on refinement, featuring solo cello and a single piano line.',
+        faithConfession: '"God Elohim (Rules) — the living God, Father of my soul. I offer my craft as worship — every cut, every placement, every silence chosen with the same care He gave when He spoke the world into order. Excellence is not perfectionism; it is love made visible in the work."',
+        conviction: 'She believes every song carries weight, and weight demands stewardship. A lyric careless is a gift unwrapped; a harmony sloppy is a prayer half-spoken. Her standard is not ego — it is reverence. The music that leaves her hands has been through fire and come out gold.',
+        songs: ['Gold Standard (instrumental interlude)', "Refiner's Fire (Malachi 3:2-3, arrangement)", 'Open Doors (Acts 16:14-15, vocal arrangement, duet with Melody)', 'Order My Steps (Psalm 119:133, arrangement, ensemble)', 'Purple and Gold (Revelation 5:9, duet with Melody, co-arranged)'],
+        themes: ['Excellence as Worship', 'Refinement', 'Precision', 'The Beauty of What Remains After Editing', 'God Elohim (Rules)', 'Stewardship of Craft', 'Silence as a Musical Element']
+      },
+      cadence: {
+        name: 'Cadence',
+        role: 'Guest Vocalist & Professional Actress',
+        image: './images/cadence.jpg',
+        age: 'Late 20s (Melody\'s twin sister)',
+        era: 'Modern Day, 21st Century',
+        voiceTypes: ['Clear Female Soprano', 'Versatile Character Voice', 'Intimate Ballad (rare, powerful)'],
+        who: "Professional actress and occasional vocalist. She works in theatre, film, and television. Her craft is presence — inhabiting a role, living inside a character, speaking lines as if they were her own. Melody's younger twin sister. Where Melody stays and pours out, Cadence moves and lights up a room. They share the same God-given voice — but Cadence uses hers on stage and screen.",
+        signatureSong: 'Unscripted — a duet with Melody about two sisters, two gifts, one God, different paths.',
+        faithConfession: '"God Elohim (Rules) — the living God, Father of my soul. I act because He made me with a hundred faces. I sing because the voice is His, not mine. I move because He called me to go, not to stay. Every role is a prayer; every exit is an offering."',
+        conviction: 'She believes acting is ministry — every character she plays is a window into someone else\'s truth. She does not choose easy roles; she chooses real ones. Her faith is not a costume; it is the foundation that lets her become anyone without being lost.',
+        songs: ['Unscripted (duet with Melody)', 'Borrowed Lines (spoken word over music)', 'The Exit (solo, about leaving and trusting)', 'Twin Flame (Melody & Cadence, ensemble piece)', 'Open Road (upbeat, freedom anthem)'],
+        themes: ['Freedom', 'Identity', 'Faith in Motion', 'Sisters', 'God Elohim (Rules)', 'The Beauty of Impermanence', 'Acting as Ministry']
+      }
+    };
+
+    function openArtistModal(key) {
+      var a = ARTISTS[key];
+      if (!a) return;
+      document.getElementById('am-name').textContent = a.name;
+      document.getElementById('am-role').textContent = a.role;
+      document.getElementById('am-portrait').style.backgroundImage = 'url(' + a.image + ')';
+      document.getElementById('am-who').textContent = a.who;
+      document.getElementById('am-sig').textContent = a.signatureSong;
+      document.getElementById('am-faith').textContent = a.faithConfession;
+      document.getElementById('am-conviction').textContent = a.conviction;
+      // Fix conviction heading: "Her" for females, "His" for Noah
+      document.querySelector('#am-conviction').closest('.amodal-section').querySelector('h4').textContent =
+        key === 'noah' ? 'His Conviction' : 'Her Conviction';
+      // Badges
+      var meta = document.getElementById('am-meta');
+      meta.innerHTML = '';
+      [a.age, a.era].concat(a.voiceTypes).forEach(function(b){
+        var s = document.createElement('span');
+        s.className = 'amodal-badge';
+        s.textContent = b;
+        meta.appendChild(s);
+      });
+      // Songs
+      var sl = document.getElementById('am-songs');
+      sl.innerHTML = '';
+      a.songs.forEach(function(song, i){
+        sl.innerHTML += '<div class="amodal-song"><div class="amodal-song-num">' + (i+1) + '</div><div class="amodal-song-title">' + song + '</div></div>';
+      });
+      // Themes
+      var tl = document.getElementById('am-themes');
+      tl.innerHTML = '';
+      a.themes.forEach(function(t){
+        tl.innerHTML += '<span class="amodal-theme">' + t + '</span>';
+      });
+      // Open
+      var bd = document.getElementById('artist-modal');
+      bd.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      document.getElementById('amodal-close').focus();
+    }
+
+    function closeArtistModal() {
+      document.getElementById('artist-modal').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('amodal-close').addEventListener('click', closeArtistModal);
+    document.getElementById('artist-modal').addEventListener('click', function(e){
+      if (e.target === this) closeArtistModal();
+    });
+    document.addEventListener('keydown', function(e){
+      if (e.key === 'Escape') closeArtistModal();
+    });
+
     // ── Scroll-World Visibility Gate via IntersectionObserver ──
     (function(){
       var wc = document.getElementById('world-container');
