@@ -21,7 +21,7 @@
   .container{max-width:1180px;margin:0 auto;padding:0 24px}
 
   /* topbar */
-  .topbar{position:fixed;top:0;left:0;right:0;z-index:80;display:flex;align-items:center;justify-content:space-between;padding:18px 28px;background:linear-gradient(to bottom,rgba(11,11,12,.85),transparent);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
+  .topbar{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:16px 28px;background:rgba(0,0,0,.55);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.07)}
   .brand{display:inline-flex;align-items:center;gap:10px;color:var(--text);font-weight:900;letter-spacing:-.02em;font-size:18px}
   .brand__mark{width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,var(--purple),var(--accent));box-shadow:0 0 24px rgba(124,58,237,.45)}
   .brand__name{background:linear-gradient(to right,#fff,#c4b5fd);-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -157,8 +157,19 @@
 </style>
 </head>
 <body>
+  <nav class="topbar" id="page-topbar">
+    <a href="#" class="brand"><span class="brand__mark"></span><span class="brand__name">HIS GLORY</span></a>
+    <div class="nav">
+      <a class="nav__item" href="#artists">Artists</a>
+      <a class="nav__item" href="#music">Music</a>
+      <a class="nav__item" href="./dashboard.html">Dashboard</a>
+      <a class="nav__item" href="#videos">Videos</a>
+      <a class="nav__item" href="#events">Events</a>
+      <a class="nav__item" href="#contact">Contact</a>
+    </div>
+  </nav>
 
-  <!-- 3D Scroll-World Container -->
+  <!-- 3D Scroll-World Container — first thing on page -->
   <div id="world-container" style="position:relative; width:100%; min-height:100vh;"></div>
 
   <section id="artists">
