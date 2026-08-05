@@ -152,6 +152,9 @@
      Keep engine position:fixed intact (required for 3D effect).
      Hide all fixed layers by default; show only while #world-container
      is intersecting the viewport. This prevents bleed onto other sections. */
+  /* hide sparkle particles — they overlap artist portraits */
+  .sw-particles { display: none !important; }
+
   .sw-sky,.sw-scrollbar,.sw-topbar,.sw-stage,.sw-copylayer,.sw-route,.sw-hint{
     visibility:hidden;
     pointer-events:none;
