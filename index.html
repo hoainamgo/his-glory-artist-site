@@ -52,15 +52,20 @@
   .grid.2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
 
   /* artist card */
-  .artist{background:var(--surface);border:1px solid var(--border);border-radius:22px;overflow:hidden;transition:.25s}
-  .artist:hover{border-color:#3a3a3a;transform:translateY(-2px)}
-  .artist .face{position:relative;aspect-ratio:3/4;background:linear-gradient(160deg,#12121a,#1e1628)}
-  .artist .body{padding:22px}
-  .artist .name{font-size:22px;font-weight:800;margin-bottom:4px}
-  .artist .role{color:var(--muted);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.12em;margin-bottom:10px}
-  .artist .blurb{color:var(--muted);font-size:14px;line-height:1.6;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
-  .artist .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
-  .tag{padding:6px 10px;border-radius:999px;background:#0f0f11;border:1px solid var(--border);color:var(--muted);font-size:12px;font-weight:600}
+  .artist{background:var(--surface);border:1px solid var(--border);border-radius:22px;overflow:hidden;transition:.25s;display:flex;flex-direction:column}
+  .artist:hover{border-color:#4a4a4a;transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.4)}
+  .artist-img-wrapper{width:100%;padding:16px 16px 0;display:flex;justify-content:center;background:radial-gradient(circle at 50% 30%,rgba(124,58,237,.12),transparent 70%)}
+  .artist .face{width:140px;height:140px;border-radius:50%;border:3px solid rgba(212,175,55,.4);box-shadow:0 6px 20px rgba(0,0,0,.5);background-size:cover;background-position:center top;transition:transform .3s ease}
+  .artist:hover .face{transform:scale(1.05);border-color:var(--gold)}
+  .artist .body{padding:20px;display:flex;flex-direction:column;flex:1}
+  .artist .name{font-size:22px;font-weight:800;margin-bottom:2px;text-align:center}
+  .artist .role{color:var(--gold);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px;text-align:center}
+  .artist .detail-list{font-size:13px;color:var(--muted);line-height:1.55;margin-bottom:12px;display:flex;flex-direction:column;gap:6px}
+  .artist .detail-item{display:flex;gap:6px}
+  .artist .detail-item b{color:var(--text);font-weight:600;min-width:64px}
+  .artist .blurb{color:var(--muted);font-size:13px;line-height:1.6;margin-bottom:14px;background:rgba(0,0,0,.2);padding:10px 12px;border-radius:10px;border-left:3px solid var(--purple)}
+  .artist .tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto}
+  .tag{padding:4px 10px;border-radius:999px;background:#0f0f11;border:1px solid var(--border);color:var(--muted);font-size:11px;font-weight:600}
 
   /* track */
   .track{display:grid;grid-template-columns:64px 1fr auto;gap:16px;align-items:center;padding:14px 16px;border-radius:14px;background:var(--surface);border:1px solid var(--border);transition:.25s}
@@ -130,39 +135,71 @@
         <p>Four voices. One message. Each artist brings a different gift to the same calling.</p>
       </div>
       <div class="grid 4">
+        <!-- Melody -->
         <div class="artist">
-          <div class="face" style="background-image:url('./images/melody.jpg');background-size:cover;background-position:center;"></div>
+          <div class="artist-img-wrapper">
+            <div class="face" style="background-image:url('./images/melody.jpg');"></div>
+          </div>
           <div class="body">
             <div class="name">Melody</div>
-            <div class="role">Female Lead • Vocals / Songwriter</div>
-            <div class="blurb">Professional sacred vocalist & songwriter (His Glory lead). Compsoes from encounter and prayer. Warm crystalline contralto. Persona: Mary Magdalene devotion.</div>
+            <div class="role">Female Lead Vocalist & Songwriter</div>
+            <div class="detail-list">
+              <div class="detail-item"><b>Giọng:</b> Natural Female Contralto</div>
+              <div class="detail-item"><b>Hình tượng:</b> Mary Magdalene (Xức dầu thờ phượng)</div>
+              <div class="detail-item"><b>Tác phẩm:</b> Worthy the Name, Glory Everlasting</div>
+            </div>
+            <div class="blurb">Vocalist nữ chính sáng tác từ sự cầu nguyện và trải nghiệm tâm linh. Mỗi nốt nhạc là một sự dâng hiến trọn vẹn tâm hồn.</div>
             <div class="tags"><span class="tag">Contralto</span><span class="tag">Songwriter</span><span class="tag">Lead Voice</span></div>
           </div>
         </div>
+        <!-- Noah -->
         <div class="artist">
-          <div class="face" style="background-image:url('./images/noah.jpg');background-size:cover;background-position:center;"></div>
+          <div class="artist-img-wrapper">
+            <div class="face" style="background-image:url('./images/noah.jpg');"></div>
+          </div>
           <div class="body">
             <div class="name">Noah</div>
-            <div class="role">Male Lead • Vocals / Worship Leader</div>
-            <div class="blurb">Warm, textured baritone with steady presence. Carrying truth with precision and power. Male lead voice of victory anthems like 'The Giant Fell'.</div>
+            <div class="role">Male Lead Vocalist & Worship Leader</div>
+            <div class="detail-list">
+              <div class="detail-item"><b>Giọng:</b> Warm Textured Baritone</div>
+              <div class="detail-item"><b>Phong cách:</b> Điềm tĩnh, đầy sức mạnh</div>
+              <div class="detail-item"><b>Tác phẩm:</b> The Giant Fell, Archangel's Sword</div>
+            </div>
+            <div class="blurb">Giọng nam chính ấm áp và sâu lắng. Không phô trương biểu diễn mà truyền tải chân lý và thông điệp qua từng câu hát.</div>
             <div class="tags"><span class="tag">Baritone</span><span class="tag">Worship Leader</span><span class="tag">Male Lead</span></div>
           </div>
         </div>
+        <!-- Harmony -->
         <div class="artist">
-          <div class="face" style="background-image:url('./images/harmony.jpg');background-size:cover;background-position:center;"></div>
+          <div class="artist-img-wrapper">
+            <div class="face" style="background-image:url('./images/harmony.jpg');"></div>
+          </div>
           <div class="body">
             <div class="name">Harmony</div>
-            <div class="role">Gold-Standard Editor • Vocal Arranger</div>
-            <div class="blurb">Sacred music refiner and arranger. Ensures every lyric and harmony reaches gold standard. Minimalist precision and measured alto voice.</div>
+            <div class="role">Gold-Standard Music Editor & Arranger</div>
+            <div class="detail-list">
+              <div class="detail-item"><b>Giọng:</b> Low Measured Alto</div>
+              <div class="detail-item"><b>Phong cách:</b> Tối giản, chính xác tuyệt đối</div>
+              <div class="detail-item"><b>Tác phẩm:</b> Gold Standard, Refiner's Fire</div>
+            </div>
+            <div class="blurb">Nhà biên tập và hòa âm chuẩn mực. Tinh chỉnh từng lời ca và nốt nhạc cho đến khi đạt độ tinh khiết và vàng mười.</div>
             <div class="tags"><span class="tag">Gold-Standard Editor</span><span class="tag">Arranger</span><span class="tag">Alto</span></div>
           </div>
         </div>
+        <!-- Cadence -->
         <div class="artist">
-          <div class="face" style="background-image:url('./images/cadence.jpg');background-size:cover;background-position:center;"></div>
+          <div class="artist-img-wrapper">
+            <div class="face" style="background-image:url('./images/cadence.jpg');"></div>
+          </div>
           <div class="body">
             <div class="name">Cadence</div>
-            <div class="role">Guest Vocalist • Actress (Twin Sister)</div>
-            <div class="blurb">Melody’s younger twin sister. Professional actress and clear soprano. Represents freedom and faith in motion on stage and screen.</div>
+            <div class="role">Guest Vocalist & Professional Actress</div>
+            <div class="detail-list">
+              <div class="detail-item"><b>Giọng:</b> Clear Versatile Soprano</div>
+              <div class="detail-item"><b>Mối quan hệ:</b> Em gái song sinh của Melody</div>
+              <div class="detail-item"><b>Tác phẩm:</b> Unscripted (Duet with Melody)</div>
+            </div>
+            <div class="blurb">Nữ diễn viên tài năng và ca sĩ khách mời. Đại diện cho sự tự do, linh hoạt và đức tin tràn đầy năng lượng trên sân khấu.</div>
             <div class="tags"><span class="tag">Soprano</span><span class="tag">Actress</span><span class="tag">Twin Sister</span></div>
           </div>
         </div>
