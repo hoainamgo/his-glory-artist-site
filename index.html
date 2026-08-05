@@ -104,6 +104,20 @@
     .amodal-body{padding:20px 20px 28px}
   }
 
+  /* video card */
+  .vcard{background:var(--surface);border:1px solid var(--border);border-radius:18px;overflow:hidden;transition:.25s;cursor:pointer}
+  .vcard:hover{border-color:#4a4a4a;transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.5)}
+  .vcard-thumb{position:relative;width:100%;aspect-ratio:16/9;background:linear-gradient(135deg,var(--purple),var(--accent));overflow:hidden;}
+  .vcard-thumb img{width:100%;height:100%;object-fit:cover;display:block;}
+  .vcard-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.35);transition:.2s}
+  .vcard:hover .vcard-play{background:rgba(0,0,0,.55)}
+  .vcard-play-btn{width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,.15);backdrop-filter:blur(6px);border:2px solid rgba(255,255,255,.5);display:grid;place-items:center;font-size:20px;color:#fff;transition:.2s}
+  .vcard:hover .vcard-play-btn{background:rgba(124,58,237,.7);border-color:var(--purple);transform:scale(1.1)}
+  .vcard-info{padding:18px 20px 20px}
+  .vcard-info h4{font-size:17px;font-weight:800;margin:0 0 6px;color:#fff}
+  .vcard-meta{display:flex;gap:12px;color:var(--muted);font-size:13px;align-items:center}
+  .vcard-badge{background:rgba(124,58,237,.18);border:1px solid rgba(124,58,237,.3);color:#c4b5fd;padding:3px 9px;border-radius:999px;font-size:11px;font-weight:700}
+
   /* track */
   .track{display:grid;grid-template-columns:64px 1fr auto;gap:16px;align-items:center;padding:14px 16px;border-radius:14px;background:var(--surface);border:1px solid var(--border);transition:.25s}
   .track:hover{border-color:#3a3a3a}
@@ -394,8 +408,32 @@
         <p>Official videos, studio sessions, and behind the scenes.</p>
       </div>
       <div class="grid 2">
-        <div class="artist"><div class="face"></div><div class="body"><div class="name">Glory Everlasting (Official)</div><div class="role">YouTube • 4:12</div></div></div>
-        <div class="artist"><div class="face"></div><div class="body"><div class="name">Studio Session — The Giant Fell</div><div class="role">YouTube • 12:30</div></div></div>
+        <div class="vcard">
+          <div class="vcard-thumb" style="background:linear-gradient(135deg,#1a0533,#2d1060)">
+            <div class="vcard-play"><div class="vcard-play-btn">▶</div></div>
+          </div>
+          <div class="vcard-info">
+            <h4>Glory Everlasting (Official)</h4>
+            <div class="vcard-meta">
+              <span class="vcard-badge">YouTube</span>
+              <span>4:12</span>
+              <span>Official MV</span>
+            </div>
+          </div>
+        </div>
+        <div class="vcard">
+          <div class="vcard-thumb" style="background:linear-gradient(135deg,#0d1a2e,#1a3a5c)">
+            <div class="vcard-play"><div class="vcard-play-btn">▶</div></div>
+          </div>
+          <div class="vcard-info">
+            <h4>Studio Session — The Giant Fell</h4>
+            <div class="vcard-meta">
+              <span class="vcard-badge">YouTube</span>
+              <span>12:30</span>
+              <span>Behind the Scenes</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
