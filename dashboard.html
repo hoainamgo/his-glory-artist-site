@@ -1,0 +1,1299 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<title>AI Music Project — Dashboard</title>
+<style>
+body{font-family:system-ui,Arial;margin:0;background:#0f1115;color:#e6e6e6}
+header{padding:16px 24px;background:#1a1d24;border-bottom:2px solid #ff6f91}
+h1{margin:0;font-size:20px;color:#ff6f91}
+.kpis{display:flex;gap:16px;padding:16px 24px;flex-wrap:wrap}
+.kpi{background:#1a1d24;padding:12px 18px;border-radius:10px;min-width:120px}
+.kpi b{font-size:24px;color:#ff6f91;display:block}
+table{width:96%;margin:0 auto 40px;border-collapse:collapse;font-size:13px}
+th,td{padding:6px 8px;border-bottom:1px solid #2a2d35;text-align:left}
+th{background:#1a1d24;color:#ff6f91;position:sticky;top:0}
+tr:hover{background:#1a1d24}
+.refr{float:right;font-size:12px;color:#888}
+.tabs{padding:0 24px}
+.tab{display:inline-block;padding:8px 14px;margin-right:4px;background:#1a1d24;border-radius:8px 8px 0 0;cursor:pointer;color:#aaa}
+.tab.on{color:#ff6f91;border-bottom:2px solid #ff6f91}
+</style></head><body>
+<header><h1>🎵 AI Music Project — 210 Bài (Pop-R&B + His Glory · US)</h1>
+<span class="refr">auto-scan 210 bài · 21 audio · 20 thumb · 10 video</span></header>
+<div class="kpis">
+<div class="kpi"><b>210</b>Tổng bài</div>
+<div class="kpi"><b>21</b>Có audio</div>
+<div class="kpi"><b>20</b>Có thumbnail</div>
+<div class="kpi"><b>10</b>Có video</div>
+<div class="kpi"><b>7</b>BG loop</div>
+</div>
+<div class="tabs">
+<span class="tab on" onclick="f('all')">All</span>
+<span class="tab" onclick="f('S1')">S1</span>
+<span class="tab" onclick="f('S2')">S2</span>
+<span class="tab" onclick="f('HG')">His Glory</span>
+</div>
+<table id="t"><thead><tr><th></th><th>ID</th><th>Title</th><th>Theme</th><th>Mood</th><th>BPM</th><th>Audio</th><th>Thumb</th><th>Video</th></tr></thead>
+<tbody><tr>
+<td>🎵</td><td>S1#01</td><td>Midnight Mile</td>
+<td>Late Night Drive</td><td>wistful</td><td>109</td>
+<td>🎵song_001_mureka-7.mp3</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#02</td><td>Midnight Mile (Acoustic)</td>
+<td>Late Night Drive</td><td>dreamy</td><td>103</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#03</td><td>Midnight Mile (Night Version)</td>
+<td>Late Night Drive</td><td>free</td><td>109</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#04</td><td>Midnight Mile (Daylight Mix)</td>
+<td>Late Night Drive</td><td>restless</td><td>101</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#05</td><td>Midnight Mile (Echoes)</td>
+<td>Late Night Drive</td><td>restless</td><td>97</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#06</td><td>Midnight Mile (Interlude)</td>
+<td>Late Night Drive</td><td>wistful</td><td>107</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#07</td><td>Midnight Mile (Extended)</td>
+<td>Late Night Drive</td><td>free</td><td>110</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#08</td><td>Midnight Mile (Solo)</td>
+<td>Late Night Drive</td><td>free</td><td>98</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#09</td><td>Midnight Mile (Horizon)</td>
+<td>Late Night Drive</td><td>wistful</td><td>92</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#10</td><td>Midnight Mile (Afterglow)</td>
+<td>Late Night Drive</td><td>restless</td><td>99</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#11</td><td>Scars to Stars</td>
+<td>Healing After Goodbye</td><td>bittersweet</td><td>97</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#12</td><td>Scars to Stars (Acoustic)</td>
+<td>Healing After Goodbye</td><td>bittersweet</td><td>107</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#13</td><td>Scars to Stars (Night Version)</td>
+<td>Healing After Goodbye</td><td>tender</td><td>99</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#14</td><td>Scars to Stars (Daylight Mix)</td>
+<td>Healing After Goodbye</td><td>tender</td><td>101</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#15</td><td>Scars to Stars (Echoes)</td>
+<td>Healing After Goodbye</td><td>hopeful</td><td>98</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#16</td><td>Scars to Stars (Interlude)</td>
+<td>Healing After Goodbye</td><td>hopeful</td><td>109</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#17</td><td>Scars to Stars (Extended)</td>
+<td>Healing After Goodbye</td><td>tender</td><td>103</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#18</td><td>Scars to Stars (Solo)</td>
+<td>Healing After Goodbye</td><td>tender</td><td>103</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#19</td><td>Scars to Stars (Horizon)</td>
+<td>Healing After Goodbye</td><td>tender</td><td>102</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#20</td><td>Scars to Stars (Afterglow)</td>
+<td>Healing After Goodbye</td><td>bittersweet</td><td>108</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#21</td><td>Neon Hymn</td>
+<td>City Lights / Neon</td><td>alive</td><td>102</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#22</td><td>Neon Hymn (Acoustic)</td>
+<td>City Lights / Neon</td><td>electric</td><td>106</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#23</td><td>Neon Hymn (Night Version)</td>
+<td>City Lights / Neon</td><td>alive</td><td>104</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#24</td><td>Neon Hymn (Daylight Mix)</td>
+<td>City Lights / Neon</td><td>electric</td><td>95</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#25</td><td>Neon Hymn (Echoes)</td>
+<td>City Lights / Neon</td><td>electric</td><td>104</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#26</td><td>Neon Hymn (Interlude)</td>
+<td>City Lights / Neon</td><td>electric</td><td>107</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#27</td><td>Neon Hymn (Extended)</td>
+<td>City Lights / Neon</td><td>dazzled</td><td>97</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#28</td><td>Neon Hymn (Solo)</td>
+<td>City Lights / Neon</td><td>dazzled</td><td>96</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#29</td><td>Neon Hymn (Horizon)</td>
+<td>City Lights / Neon</td><td>lonely-bright</td><td>99</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#30</td><td>Neon Hymn (Afterglow)</td>
+<td>City Lights / Neon</td><td>lonely-bright</td><td>102</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#31</td><td>First July</td>
+<td>First Love Flashback</td><td>nostalgic</td><td>99</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#32</td><td>First July (Acoustic)</td>
+<td>First Love Flashback</td><td>warm</td><td>100</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#33</td><td>First July (Night Version)</td>
+<td>First Love Flashback</td><td>aching</td><td>92</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#34</td><td>First July (Daylight Mix)</td>
+<td>First Love Flashback</td><td>soft</td><td>112</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#35</td><td>First July (Echoes)</td>
+<td>First Love Flashback</td><td>soft</td><td>107</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#36</td><td>First July (Interlude)</td>
+<td>First Love Flashback</td><td>nostalgic</td><td>110</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#37</td><td>First July (Extended)</td>
+<td>First Love Flashback</td><td>soft</td><td>109</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#38</td><td>First July (Solo)</td>
+<td>First Love Flashback</td><td>nostalgic</td><td>107</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#39</td><td>First July (Horizon)</td>
+<td>First Love Flashback</td><td>soft</td><td>92</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#40</td><td>First July (Afterglow)</td>
+<td>First Love Flashback</td><td>warm</td><td>96</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#41</td><td>Crown of Me</td>
+<td>Self-Love / Empowerment</td><td>free</td><td>95</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#42</td><td>Crown of Me (Acoustic)</td>
+<td>Self-Love / Empowerment</td><td>unshakable</td><td>99</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#43</td><td>Crown of Me (Night Version)</td>
+<td>Self-Love / Empowerment</td><td>confident</td><td>111</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#44</td><td>Crown of Me (Daylight Mix)</td>
+<td>Self-Love / Empowerment</td><td>radiant</td><td>103</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#45</td><td>Crown of Me (Echoes)</td>
+<td>Self-Love / Empowerment</td><td>radiant</td><td>108</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#46</td><td>Crown of Me (Interlude)</td>
+<td>Self-Love / Empowerment</td><td>radiant</td><td>101</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#47</td><td>Crown of Me (Extended)</td>
+<td>Self-Love / Empowerment</td><td>confident</td><td>97</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#48</td><td>Crown of Me (Solo)</td>
+<td>Self-Love / Empowerment</td><td>free</td><td>94</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#49</td><td>Crown of Me (Horizon)</td>
+<td>Self-Love / Empowerment</td><td>unshakable</td><td>106</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#50</td><td>Crown of Me (Afterglow)</td>
+<td>Self-Love / Empowerment</td><td>confident</td><td>99</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#51</td><td>Half a World</td>
+<td>Missing You (Distance)</td><td>patient</td><td>112</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#52</td><td>Half a World (Acoustic)</td>
+<td>Missing You (Distance)</td><td>aching</td><td>92</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#53</td><td>Half a World (Night Version)</td>
+<td>Missing You (Distance)</td><td>aching</td><td>88</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#54</td><td>Half a World (Daylight Mix)</td>
+<td>Missing You (Distance)</td><td>patient</td><td>90</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#55</td><td>Half a World (Echoes)</td>
+<td>Missing You (Distance)</td><td>patient</td><td>96</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#56</td><td>Half a World (Interlude)</td>
+<td>Missing You (Distance)</td><td>aching</td><td>85</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#57</td><td>Half a World (Extended)</td>
+<td>Missing You (Distance)</td><td>patient</td><td>98</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#58</td><td>Half a World (Solo)</td>
+<td>Missing You (Distance)</td><td>longing</td><td>84</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#59</td><td>Half a World (Horizon)</td>
+<td>Missing You (Distance)</td><td>patient</td><td>100</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#60</td><td>Half a World (Afterglow)</td>
+<td>Missing You (Distance)</td><td>tender</td><td>89</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#61</td><td>Golden August</td>
+<td>Summer Memory</td><td>glowing</td><td>99</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#62</td><td>Golden August (Acoustic)</td>
+<td>Summer Memory</td><td>fading</td><td>90</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#63</td><td>Golden August (Night Version)</td>
+<td>Summer Memory</td><td>sun-warm</td><td>88</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#64</td><td>Golden August (Daylight Mix)</td>
+<td>Summer Memory</td><td>glowing</td><td>100</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#65</td><td>Golden August (Echoes)</td>
+<td>Summer Memory</td><td>glowing</td><td>96</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#66</td><td>Golden August (Interlude)</td>
+<td>Summer Memory</td><td>carefree</td><td>84</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#67</td><td>Golden August (Extended Mix)</td>
+<td>Summer Memory</td><td>sun-warm</td><td>104</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#68</td><td>Golden August (Solo)</td>
+<td>Summer Memory</td><td>sun-warm</td><td>86</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#69</td><td>Golden August (Horizon)</td>
+<td>Summer Memory</td><td>glowing</td><td>98</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#70</td><td>Golden August (Afterglow)</td>
+<td>Summer Memory</td><td>sun-warm</td><td>82</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#71</td><td>Still the Storm</td>
+<td>Quiet Strength</td><td>unbreakable</td><td>101</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#72</td><td>Still the Storm (Acoustic)</td>
+<td>Quiet Strength</td><td>unbreakable</td><td>98</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#73</td><td>Still the Storm (Night Version)</td>
+<td>Quiet Strength</td><td>steady</td><td>107</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#74</td><td>Still the Storm (Daylight Mix)</td>
+<td>Quiet Strength</td><td>resolute</td><td>103</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#75</td><td>Still the Storm (Echoes)</td>
+<td>Quiet Strength</td><td>gentle</td><td>96</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#76</td><td>Still the Storm (Interlude)</td>
+<td>Quiet Strength</td><td>gentle</td><td>105</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#77</td><td>Still the Storm (Extended)</td>
+<td>Quiet Strength</td><td>steady</td><td>97</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#78</td><td>Still the Storm (Solo)</td>
+<td>Quiet Strength</td><td>gentle</td><td>86</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#79</td><td>Still the Storm (Horizon)</td>
+<td>Quiet Strength</td><td>gentle</td><td>98</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#80</td><td>Still the Storm (Afterglow)</td>
+<td>Quiet Strength</td><td>gentle</td><td>82</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#81</td><td>Floor Forgiveness</td>
+<td>Dance-Floor Liberation</td><td>released</td><td>99</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#82</td><td>Floor Forgiveness (Acoustic)</td>
+<td>Dance-Floor Liberation</td><td>free</td><td>97</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#83</td><td>Floor Forgiveness (Night Version)</td>
+<td>Dance-Floor Liberation</td><td>free</td><td>108</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#84</td><td>Floor Forgiveness (Daylight Mix)</td>
+<td>Dance-Floor Liberation</td><td>wild</td><td>112</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#85</td><td>Floor Forgiveness (Echoes)</td>
+<td>Dance-Floor Liberation</td><td>free</td><td>104</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#86</td><td>Floor Forgiveness (Interlude)</td>
+<td>Dance-Floor Liberation</td><td>wild</td><td>110</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#87</td><td>Floor Forgiveness (Extended)</td>
+<td>Dance-Floor Liberation</td><td>euphoric</td><td>118</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#88</td><td>Floor Forgiveness (Solo)</td>
+<td>Dance-Floor Liberation</td><td>euphoric</td><td>100</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#89</td><td>Floor Forgiveness (Horizon)</td>
+<td>Dance-Floor Liberation</td><td>released</td><td>106</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#90</td><td>Floor Forgiveness (Afterglow)</td>
+<td>Dance-Floor Liberation</td><td>euphoric</td><td>102</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#91</td><td>Dear Little One</td>
+<td>Letter to My Younger Self</td><td>hopeful</td><td>92</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#92</td><td>Dear Little One (Acoustic)</td>
+<td>Letter to My Younger Self</td><td>tender</td><td>106</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#93</td><td>Dear Little One (Night Version)</td>
+<td>Letter to My Younger Self</td><td>tender</td><td>111</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#94</td><td>Dear Little One (Daylight Mix)</td>
+<td>Letter to My Younger Self</td><td>tender</td><td>105</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#95</td><td>Dear Little One (Echoes)</td>
+<td>Letter to My Younger Self</td><td>tender</td><td>112</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#96</td><td>Dear Little One (Interlude)</td>
+<td>Letter to My Younger Self</td><td>tender</td><td>110</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#97</td><td>Dear Little One (Extended)</td>
+<td>Letter to My Younger Self</td><td>gentle</td><td>94</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#98</td><td>Dear Little One (Solo)</td>
+<td>Letter to My Younger Self</td><td>hopeful</td><td>103</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#99</td><td>Dear Little One (Horizon)</td>
+<td>Letter to My Younger Self</td><td>gentle</td><td>95</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S1#100</td><td>Dear Little One (Afterglow)</td>
+<td>Letter to My Younger Self</td><td>hopeful</td><td>106</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>✅</td><td>S2#01</td><td>Stumbling First Words</td>
+<td>Tender Love</td><td>tender</td><td>84</td>
+<td>🎵song_001_mureka-7.5.mp3</td>
+<td>🖼️</td>
+<td>🎬</td></tr>
+<tr>
+<td>✅</td><td>S2#02</td><td>A Thousand Miles of Messages</td>
+<td>Tender Love</td><td>warm</td><td>96</td>
+<td>🎵song_002_relay_test.mp3</td>
+<td>🖼️</td>
+<td>🎬</td></tr>
+<tr>
+<td>✅</td><td>S2#03</td><td>Sorry At the Door</td>
+<td>Tender Love</td><td>gentle</td><td>78</td>
+<td>🎵song_003_mureka-7.5.mp3</td>
+<td>🖼️</td>
+<td>🎬</td></tr>
+<tr>
+<td>✅</td><td>S2#04</td><td>Your Eyes Wrote My Name</td>
+<td>Tender Love</td><td>tender</td><td>82</td>
+<td>🎵song_004_mureka-7.5.mp3</td>
+<td>🖼️</td>
+<td>🎬</td></tr>
+<tr>
+<td>✅</td><td>S2#05</td><td>Kisses Taste Like Rain</td>
+<td>Tender Love</td><td>warm</td><td>100</td>
+<td>🎵song_005_mureka-7.5.mp3</td>
+<td>🖼️</td>
+<td>🎬</td></tr>
+<tr>
+<td>✅</td><td>S2#06</td><td>Still Your Hand at Eighty</td>
+<td>Tender Love</td><td>gentle</td><td>72</td>
+<td>🎵song_006_mureka-7.5.mp3</td>
+<td>🖼️</td>
+<td>🎬</td></tr>
+<tr>
+<td>✅</td><td>S2#07</td><td>I Never Said Your Name</td>
+<td>Tender Love</td><td>tender</td><td>80</td>
+<td>🎵song_007_mureka-7.5.mp3</td>
+<td>🖼️</td>
+<td>🎬</td></tr>
+<tr>
+<td>✅</td><td>S2#08</td><td>Round Two Feels Like Fire</td>
+<td>Tender Love</td><td>warm</td><td>104</td>
+<td>🎵song_008_mureka-7.5.mp3</td>
+<td>🖼️</td>
+<td>🎬</td></tr>
+<tr>
+<td>✅</td><td>S2#09</td><td>You Taught Me Me</td>
+<td>Tender Love</td><td>gentle</td><td>88</td>
+<td>🎵song_009_mureka-7.5.mp3</td>
+<td>🖼️</td>
+<td>🎬</td></tr>
+<tr>
+<td>✅</td><td>S2#10</td><td>Pages Smell Like Us</td>
+<td>Tender Love</td><td>tender</td><td>76</td>
+<td>🎵song_010_mureka-7.5.mp3</td>
+<td>🖼️</td>
+<td>🎬</td></tr>
+<tr>
+<td>⏳</td><td>S2#11</td><td>Fold You Like Spring</td>
+<td>Healing</td><td>healing</td><td>92</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#12</td><td>Scars Became Stars</td>
+<td>Healing</td><td>soft</td><td>84</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#13</td><td>Forgive the Younger Me</td>
+<td>Healing</td><td>hopeful</td><td>98</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#14</td><td>Glue the Pieces Slow</td>
+<td>Healing</td><td>healing</td><td>90</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#15</td><td>Tears Then a Quiet Smile</td>
+<td>Healing</td><td>soft</td><td>82</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#16</td><td>The Door Stays Closed</td>
+<td>Healing</td><td>hopeful</td><td>96</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#17</td><td>Learning How to Breathe</td>
+<td>Healing</td><td>healing</td><td>88</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#18</td><td>Alone Can Still Be Warm</td>
+<td>Healing</td><td>soft</td><td>86</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#19</td><td>Letting Go Was Love Too</td>
+<td>Healing</td><td>hopeful</td><td>94</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#20</td><td>Dawn After the Long Night</td>
+<td>Healing</td><td>healing</td><td>92</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#21</td><td>Mama's Warm Table</td>
+<td>Family & Connection</td><td>warm</td><td>98</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#22</td><td>Daddy's Grease-Stained Hands</td>
+<td>Family & Connection</td><td>cozy</td><td>104</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#23</td><td>Your Small Hand in Mine</td>
+<td>Family & Connection</td><td>nostalgic</td><td>88</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#24</td><td>The Old Film on the Sofa</td>
+<td>Family & Connection</td><td>warm</td><td>92</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#25</td><td>Laughter in the Blackout</td>
+<td>Family & Connection</td><td>cozy</td><td>96</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#26</td><td>Rain and Rice at Home</td>
+<td>Family & Connection</td><td>nostalgic</td><td>100</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#27</td><td>The Road Back Home Smells</td>
+<td>Family & Connection</td><td>warm</td><td>106</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#28</td><td>Siblings Fight Then Hug</td>
+<td>Family & Connection</td><td>cozy</td><td>110</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#29</td><td>Grandpa's Tale by Fire</td>
+<td>Family & Connection</td><td>nostalgic</td><td>84</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#30</td><td>Home Is Where You Are</td>
+<td>Family & Connection</td><td>warm</td><td>102</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#31</td><td>Since First Grade</td>
+<td>Friendship</td><td>playful</td><td>108</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#32</td><td>On My Way at Two AM</td>
+<td>Friendship</td><td>loyal</td><td>92</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#33</td><td>Half a Cake</td>
+<td>Friendship</td><td>bright</td><td>116</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#34</td><td>You Read My Silence</td>
+<td>Friendship</td><td>playful</td><td>100</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#35</td><td>We Flunked, Then We Laughed</td>
+<td>Friendship</td><td>loyal</td><td>96</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#36</td><td>Road Trip Just Us Two</td>
+<td>Friendship</td><td>bright</td><td>112</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#37</td><td>You Stayed When They Left</td>
+<td>Friendship</td><td>playful</td><td>104</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#38</td><td>Our Group Chat Never Sleeps</td>
+<td>Friendship</td><td>loyal</td><td>98</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#39</td><td>Letter to My Old Friend</td>
+<td>Friendship</td><td>bright</td><td>110</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#40</td><td>Friendship Outlives the Years</td>
+<td>Friendship</td><td>playful</td><td>106</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#41</td><td>Enough For Today</td>
+<td>Self-Love</td><td>empowered</td><td>92</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#42</td><td>Unfollow the Old Me</td>
+<td>Self-Love</td><td>soft</td><td>84</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#43</td><td>I Wear My Flaws Like Crowns</td>
+<td>Self-Love</td><td>confident</td><td>104</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#44</td><td>Sorry Not Sorry I'm Here</td>
+<td>Self-Love</td><td>empowered</td><td>96</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#45</td><td>I Forgive My Own Soft Heart</td>
+<td>Self-Love</td><td>soft</td><td>76</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#46</td><td>My Cracks Let Light In</td>
+<td>Self-Love</td><td>confident</td><td>100</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#47</td><td>Alone I Still Stand Tall</td>
+<td>Self-Love</td><td>empowered</td><td>88</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#48</td><td>Rest Is Not a Crime</td>
+<td>Self-Love</td><td>soft</td><td>70</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#49</td><td>Say My Name With Pride</td>
+<td>Self-Love</td><td>confident</td><td>106</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#50</td><td>No Copy, Just the First Me</td>
+<td>Self-Love</td><td>empowered</td><td>94</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#51</td><td>The Lamp in the Quiet Alley</td>
+<td>Hope & Light</td><td>hopeful</td><td>88</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#52</td><td>The Seed That Found the Sun</td>
+<td>Hope & Light</td><td>bright</td><td>92</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#53</td><td>A Letter to Tomorrow Me</td>
+<td>Hope & Light</td><td>warm</td><td>84</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#54</td><td>The Rainbow After the Storm</td>
+<td>Hope & Light</td><td>hopeful</td><td>90</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#55</td><td>The First Bird of Spring</td>
+<td>Hope & Light</td><td>bright</td><td>96</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#56</td><td>Just Walk and You'll Arrive</td>
+<td>Hope & Light</td><td>warm</td><td>88</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#57</td><td>One Little Candle</td>
+<td>Hope & Light</td><td>hopeful</td><td>80</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#58</td><td>Dawn for the Sleepless</td>
+<td>Hope & Light</td><td>bright</td><td>92</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#59</td><td>A Slit of Light</td>
+<td>Hope & Light</td><td>warm</td><td>82</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#60</td><td>Hope Is a Little Flame</td>
+<td>Hope & Light</td><td>hopeful</td><td>90</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#61</td><td>The Old Bus Ticket</td>
+<td>Memory & Nostalgia</td><td>nostalgic</td><td>84</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#62</td><td>The Sunburnt Cassette</td>
+<td>Memory & Nostalgia</td><td>wistful</td><td>76</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#63</td><td>Our Corner Booth</td>
+<td>Memory & Nostalgia</td><td>warm</td><td>88</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#64</td><td>The Old Film Camera</td>
+<td>Memory & Nostalgia</td><td>nostalgic</td><td>80</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#65</td><td>That Summer</td>
+<td>Memory & Nostalgia</td><td>wistful</td><td>92</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#66</td><td>Grandma's Handwritten Note</td>
+<td>Memory & Nostalgia</td><td>warm</td><td>74</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#67</td><td>Shoes That Walked My Youth</td>
+<td>Memory & Nostalgia</td><td>nostalgic</td><td>82</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#68</td><td>That Song on the Radio</td>
+<td>Memory & Nostalgia</td><td>wistful</td><td>90</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#69</td><td>The Last Bell</td>
+<td>Memory & Nostalgia</td><td>warm</td><td>86</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#70</td><td>Memory Smells Like Ink</td>
+<td>Memory & Nostalgia</td><td>nostalgic</td><td>78</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#71</td><td>The Wind Lulls My Breath</td>
+<td>Peace & Mindfulness</td><td>calm</td><td>82</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#72</td><td>Early Morning Tea Smoke</td>
+<td>Peace & Mindfulness</td><td>serene</td><td>76</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#73</td><td>Stillness in the Pines</td>
+<td>Peace & Mindfulness</td><td>still</td><td>80</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#74</td><td>The Slow Beat of the Waves</td>
+<td>Peace & Mindfulness</td><td>calm</td><td>84</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#75</td><td>Watching the Clouds Drift</td>
+<td>Peace & Mindfulness</td><td>serene</td><td>78</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#76</td><td>A Day with the Phone Off</td>
+<td>Peace & Mindfulness</td><td>still</td><td>72</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#77</td><td>My Small Herb Corner</td>
+<td>Peace & Mindfulness</td><td>calm</td><td>86</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#78</td><td>Slow Steps on the Path</td>
+<td>Peace & Mindfulness</td><td>serene</td><td>74</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#79</td><td>Silence Is Enough Too</td>
+<td>Peace & Mindfulness</td><td>still</td><td>70</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#80</td><td>Calm Inside the Noise</td>
+<td>Peace & Mindfulness</td><td>calm</td><td>88</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#81</td><td>I Stand Up Again</td>
+<td>Overcome & Brave</td><td>brave</td><td>104</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#82</td><td>The First Time I Said No</td>
+<td>Overcome & Brave</td><td>steady</td><td>90</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#83</td><td>Crossing the Rough Tide</td>
+<td>Overcome & Brave</td><td>strong</td><td>96</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#84</td><td>Take Off the Mask</td>
+<td>Overcome & Brave</td><td>brave</td><td>92</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#85</td><td>Facing My Fear</td>
+<td>Overcome & Brave</td><td>steady</td><td>88</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#86</td><td>One More Mile</td>
+<td>Overcome & Brave</td><td>strong</td><td>100</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#87</td><td>Forgiving Who Left</td>
+<td>Overcome & Brave</td><td>brave</td><td>84</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#88</td><td>Breaking the Silence</td>
+<td>Overcome & Brave</td><td>steady</td><td>94</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#89</td><td>Choosing Myself</td>
+<td>Overcome & Brave</td><td>strong</td><td>98</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#90</td><td>Brave Is Just to Go</td>
+<td>Overcome & Brave</td><td>brave</td><td>102</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#91</td><td>Dancing in the Kitchen</td>
+<td>Joy & Celebrate</td><td>joyful</td><td>112</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#92</td><td>I Baked My Own Cake</td>
+<td>Joy & Celebrate</td><td>bright</td><td>108</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#93</td><td>The Street Sang Along</td>
+<td>Joy & Celebrate</td><td>playful</td><td>118</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#94</td><td>Spring Rain on My Face</td>
+<td>Joy & Celebrate</td><td>joyful</td><td>106</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#95</td><td>A Small Win Is Still a Win</td>
+<td>Joy & Celebrate</td><td>bright</td><td>110</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#96</td><td>Smiled at a Stranger</td>
+<td>Joy & Celebrate</td><td>playful</td><td>114</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#97</td><td>The Lantern Festival Glows</td>
+<td>Joy & Celebrate</td><td>joyful</td><td>116</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#98</td><td>A Planless Happy Day</td>
+<td>Joy & Celebrate</td><td>bright</td><td>102</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#99</td><td>Spin Me Round Again</td>
+<td>Joy & Celebrate</td><td>playful</td><td>120</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>⏳</td><td>S2#100</td><td>Grateful for Today's Light</td>
+<td>Joy & Celebrate</td><td>joyful</td><td>100</td>
+<td>—</td>
+<td>—</td>
+<td>—</td></tr>
+<tr>
+<td>🎵</td><td>HG#01</td><td>The Dragon Falls</td>
+<td></td><td>defiant triumphant</td><td>120</td>
+<td>🎵song_01_the_dragon_falls.mp3</td>
+<td>🖼️SEO_HIS_GLORY_3000x3000.jpg</td>
+<td>—</td></tr>
+<tr>
+<td>🎵</td><td>HG#02</td><td>Worthy the Name</td>
+<td></td><td>reverent awestruck</td><td>72</td>
+<td>🎵song_02_worthy_the_name.mp3</td>
+<td>🖼️SEO_HIS_GLORY_3000x3000.jpg</td>
+<td>—</td></tr>
+<tr>
+<td>🎵</td><td>HG#03</td><td>Rise Like the Dawn</td>
+<td></td><td>empowering anthemic</td><td>140</td>
+<td>🎵song_03_rise_like_the_dawn.mp3</td>
+<td>🖼️SEO_HIS_GLORY_3000x3000.jpg</td>
+<td>—</td></tr>
+<tr>
+<td>🎵</td><td>HG#04</td><td>Revelation Twelve</td>
+<td></td><td>cinematic solemn</td><td>100</td>
+<td>🎵song_04_revelation_twelve.mp3</td>
+<td>🖼️SEO_HIS_GLORY_3000x3000.jpg</td>
+<td>—</td></tr>
+<tr>
+<td>🎵</td><td>HG#05</td><td>Sound the Trumpet</td>
+<td></td><td>festive triumphant</td><td>128</td>
+<td>🎵song_05_sound_the_trumpet.mp3</td>
+<td>🖼️SEO_HIS_GLORY_3000x3000.jpg</td>
+<td>—</td></tr>
+<tr>
+<td>🎵</td><td>HG#06</td><td>No Weapon Stands</td>
+<td></td><td>steadfast bold</td><td>96</td>
+<td>🎵song_06_no_weapon_stands.mp3</td>
+<td>🖼️SEO_HIS_GLORY_3000x3000.jpg</td>
+<td>—</td></tr>
+<tr>
+<td>🎵</td><td>HG#07</td><td>Heaven's Host</td>
+<td></td><td>majestic luminous</td><td>110</td>
+<td>🎵song_07_heaven's_host.mp3</td>
+<td>🖼️SEO_HIS_GLORY_3000x3000.jpg</td>
+<td>—</td></tr>
+<tr>
+<td>🎵</td><td>HG#08</td><td>The Archangel's Sword</td>
+<td></td><td>dramatic resolved</td><td>84</td>
+<td>🎵song_08_the_archangel's_sword.mp3</td>
+<td>🖼️SEO_HIS_GLORY_3000x3000.jpg</td>
+<td>—</td></tr>
+<tr>
+<td>🎵</td><td>HG#09</td><td>Stand Firm</td>
+<td></td><td>tender strengthening</td><td>68</td>
+<td>🎵song_09_stand_firm.mp3</td>
+<td>🖼️SEO_HIS_GLORY_3000x3000.jpg</td>
+<td>—</td></tr>
+<tr>
+<td>🎵</td><td>HG#10</td><td>Glory Everlasting</td>
+<td></td><td>hopeful grand</td><td>90</td>
+<td>🎵song_10_glory_everlasting.mp3</td>
+<td>🖼️SEO_HIS_GLORY_3000x3000.jpg</td>
+<td>—</td></tr>
+</tbody></table>
+<script>
+function f(s){var r=document.getElementById('t').rows;for(var i=1;i<r.length;i++){var id=r[i].cells[1].textContent;var show=s=='all'||id.indexOf(s)===0;r[i].style.display=show?'':'none';}}
+</script>
+</body></html>
