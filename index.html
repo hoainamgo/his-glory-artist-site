@@ -314,44 +314,73 @@
         <div><div class="eyebrow">Discography</div><h2><span class="section-num">02</span> Latest Releases</h2></div>
         <p>Stream the newest sound — crafted for reflection and celebration.</p>
       </div>
-      <div class="grid 3">
-        <div class="artist">
-          <div class="face" style="background-image:url('./images/album_his_glory.jpg');background-size:cover;background-position:center;"></div>
-          <div class="body">
-            <div class="name">Glory Everlasting</div>
-            <div class="role">Closing Anthem • Revelation 12:10-12</div>
-            <div class="blurb">The declaration that closes the collection — full voice, unshaken faith.</div>
-            <div class="tags"><span class="tag">Full Band</span><span class="tag">Melody Lead</span></div>
-          </div>
-        </div>
-        <div class="artist">
-          <div class="face" style="background-image:url('./images/album_his_glory.jpg');background-size:cover;background-position:center;"></div>
-          <div class="body">
-            <div class="name">The Giant Fell</div>
-            <div class="role">Signature Anthem</div>
-            <div class="blurb">A driving worship anthem about facing fear and moving forward.</div>
-            <div class="tags"><span class="tag">Noah Lead</span><span class="tag">Full Band</span></div>
-          </div>
-        </div>
-        <div class="artist">
-          <div class="face" style="background-image:url('./images/album_his_glory.jpg');background-size:cover;background-position:center;"></div>
-          <div class="body">
-            <div class="name">Unscripted</div>
-            <div class="role">Duet • Melody & Cadence</div>
-            <div class="blurb">Two sisters, two gifts, one God, different paths — sung together for the first time.</div>
-            <div class="tags"><span class="tag">Duet</span><span class="tag">Sisters</span></div>
-          </div>
-        </div>
-      </div>
 
-      <div style="margin-top:56px">
-        <h3 style="margin:0 0 18px;font-size:22px;font-weight:800">Popular Tracks</h3>
-        <div class="grid" style="grid-template-columns:1fr;gap:12px">
-          <div class="track"><div class="thumb"></div><div class="info"><h4>Glory Everlasting</h4><p>Closing Anthem • Revelation</p></div><div class="play">▶</div></div>
-          <div class="track"><div class="thumb"></div><div class="info"><h4>The Giant Fell</h4><p>Signature Anthem</p></div><div class="play">▶</div></div>
-          <div class="track"><div class="thumb"></div><div class="info"><h4>Sound the Trumpet</h4><p>Duet • 1 Corinthians 15:52</p></div><div class="play">▶</div></div>
-          <div class="track"><div class="thumb"></div><div class="info"><h4>Shepherd</h4><p>Acoustic Ballad • Psalm 23</p></div><div class="play">▶</div></div>
+      <!-- Featured tracks (horizontal cards) -->
+      <div class="grid" style="grid-template-columns:1fr;gap:14px">
+
+        <div class="track" style="grid-template-columns:80px 1fr auto">
+          <div class="thumb" style="background-image:url('./images/album_his_glory.jpg');background-size:cover;background-position:center;border-radius:12px;width:80px;height:80px;flex-shrink:0"></div>
+          <div class="info">
+            <h4>Glory Everlasting</h4>
+            <p>Closing Anthem · Revelation 12:10-12 · Melody Lead</p>
+          </div>
+          <button class="play" onclick="this.textContent=this.textContent==='▶'?'❚❚':'▶'">▶</button>
         </div>
+
+        <div class="track" style="grid-template-columns:80px 1fr auto">
+          <div class="thumb" style="background-image:url('./images/album_his_glory.jpg');background-size:cover;background-position:center;border-radius:12px;width:80px;height:80px;flex-shrink:0"></div>
+          <div class="info">
+            <h4>The Giant Fell</h4>
+            <p>Signature Anthem · Full Band · Noah Lead</p>
+          </div>
+          <button class="play" onclick="this.textContent=this.textContent==='▶'?'❚❚':'▶'">▶</button>
+        </div>
+
+        <div class="track" style="grid-template-columns:80px 1fr auto">
+          <div class="thumb" style="background-image:url('./images/album_his_glory.jpg');background-size:cover;background-position:center;border-radius:12px;width:80px;height:80px;flex-shrink:0"></div>
+          <div class="info">
+            <h4>Unscripted</h4>
+            <p>Duet · Melody & Cadence · Sisters</p>
+          </div>
+          <button class="play" onclick="this.textContent=this.textContent==='▶'?'❚❚':'▶'">▶</button>
+        </div>
+
+        <div class="track" style="grid-template-columns:80px 1fr auto">
+          <div class="thumb" style="background-image:url('./images/album_his_glory.jpg');background-size:cover;background-position:center;border-radius:12px;width:80px;height:80px;flex-shrink:0"></div>
+          <div class="info">
+            <h4>Sound the Trumpet</h4>
+            <p>Duet · 1 Corinthians 15:52 · Melody & Noah</p>
+          </div>
+          <button class="play" onclick="this.textContent=this.textContent==='▶'?'❚❚':'▶'">▶</button>
+        </div>
+
+        <div class="track" style="grid-template-columns:80px 1fr auto">
+          <div class="thumb" style="background-image:url('./images/album_his_glory.jpg');background-size:cover;background-position:center;border-radius:12px;width:80px;height:80px;flex-shrink:0"></div>
+          <div class="info">
+            <h4>Shepherd</h4>
+            <p>Acoustic Ballad · Psalm 23 · Noah Lead</p>
+          </div>
+          <button class="play" onclick="this.textContent=this.textContent==='▶'?'❚❚':'▶'">▶</button>
+        </div>
+
+        <div class="track" style="grid-template-columns:80px 1fr auto">
+          <div class="thumb" style="background-image:url('./images/album_his_glory.jpg');background-size:cover;background-position:center;border-radius:12px;width:80px;height:80px;flex-shrink:0"></div>
+          <div class="info">
+            <h4>Worthy the Name</h4>
+            <p>Revelation 5:12 · Melody Lead</p>
+          </div>
+          <button class="play" onclick="this.textContent=this.textContent==='▶'?'❚❚':'▶'">▶</button>
+        </div>
+
+        <div class="track" style="grid-template-columns:80px 1fr auto">
+          <div class="thumb" style="background-image:url('./images/album_his_glory.jpg');background-size:cover;background-position:center;border-radius:12px;width:80px;height:80px;flex-shrink:0"></div>
+          <div class="info">
+            <h4>Gold Standard</h4>
+            <p>Instrumental Interlude · Solo Cello & Piano</p>
+          </div>
+          <button class="play" onclick="this.textContent=this.textContent==='▶'?'❚❚':'▶'">▶</button>
+        </div>
+
       </div>
     </div>
   </section>
@@ -459,7 +488,7 @@
           {
             id: 'melody',
             label: 'Melody',
-            still: './images/melody.jpg',
+            still: './images/scene_2_melody.jpg',
             accent: '#7c3aed',
             eyebrow: '02 / Female Lead Voice',
             title: 'Melody — Devotion',
@@ -469,7 +498,7 @@
           {
             id: 'noah',
             label: 'Noah',
-            still: './images/noah.jpg',
+            still: './images/scene_3_noah.jpg',
             accent: '#a21caf',
             eyebrow: '03 / Male Lead Voice',
             title: 'Noah — Victory',
@@ -479,7 +508,7 @@
           {
             id: 'harmony',
             label: 'Harmony',
-            still: './images/harmony.jpg',
+            still: './images/scene_4_harmony.jpg',
             accent: '#d4af37',
             eyebrow: '04 / Gold Standard',
             title: 'Harmony — Refinement',
@@ -489,7 +518,7 @@
           {
             id: 'cadence',
             label: 'Cadence',
-            still: './images/cadence.jpg',
+            still: './images/scene_5_cadence.jpg',
             accent: '#3b82f6',
             eyebrow: '05 / Freedom & Motion',
             title: 'Cadence — Free Spirit',
