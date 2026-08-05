@@ -124,6 +124,9 @@
     </div>
   </header>
 
+  <!-- 3D Scroll-World Container -->
+  <div id="world-container" style="position:relative; width:100%; min-height:100vh;"></div>
+
   <section id="artists">
     <div class="container">
       <div class="section-head">
@@ -323,6 +326,7 @@
     </div>
   </footer>
 
+  <script src="./scrub-engine.js"></script>
   <script>
     document.querySelectorAll('.play').forEach(btn=>{
       btn.addEventListener('click',()=>{
@@ -331,6 +335,84 @@
         if(on) btn.textContent='❚❚';
       });
     });
+
+    // Mount 3D Scroll-World Engine
+    if (typeof mountScrollWorld === 'function') {
+      mountScrollWorld(document.getElementById('world-container'), {
+        brand: { name: 'HIS GLORY', href: '#' },
+        diveScroll: 1.4,
+        connScroll: 0.9,
+        hint: 'Scroll to fly through the world',
+        nav: false,
+        atmosphere: true,
+        sections: [
+          {
+            id: 'sanctuary',
+            label: 'Sanctuary',
+            still: './images/scene_1_sanctuary.jpg',
+            accent: '#d4af37',
+            eyebrow: '01 / Sacred Origin',
+            title: 'Heavenly Sanctuary',
+            body: 'Born in prayer and divine inspiration. The studio diorama floating in golden clouds where every victory anthem begins.',
+            tags: ['Heavenly Diorama', 'Sacred Origin', 'Gold & Indigo']
+          },
+          {
+            id: 'melody',
+            label: 'Melody',
+            still: './images/melody.jpg',
+            accent: '#7c3aed',
+            eyebrow: '02 / Female Lead Voice',
+            title: 'Melody — Devotion',
+            body: 'Inspired by Mary Magdalene. Professional vocalist singing warm contralto worship born from encounter and prayer.',
+            tags: ['Lead Voice', 'Contralto', 'Songwriter']
+          },
+          {
+            id: 'noah',
+            label: 'Noah',
+            still: './images/noah.jpg',
+            accent: '#a21caf',
+            eyebrow: '03 / Male Lead Voice',
+            title: 'Noah — Victory',
+            body: 'Textured baritone carrying truth without theatrics. Driving victory anthems like "The Giant Fell" and "The Archangel\'s Sword".',
+            tags: ['Baritone', 'Worship Leader', 'Victory Anthems']
+          },
+          {
+            id: 'harmony',
+            label: 'Harmony',
+            still: './images/harmony.jpg',
+            accent: '#d4af37',
+            eyebrow: '04 / Gold Standard',
+            title: 'Harmony — Refinement',
+            body: 'Gold-standard sacred music editor. Precision arranger who refines raw takes until every lyric and silence shines like pure gold.',
+            tags: ['Gold Standard', 'Arranger', 'Alto']
+          },
+          {
+            id: 'cadence',
+            label: 'Cadence',
+            still: './images/cadence.jpg',
+            accent: '#3b82f6',
+            eyebrow: '05 / Freedom & Motion',
+            title: 'Cadence — Free Spirit',
+            body: 'Melody\'s twin sister and professional actress. Clear soprano duet partner representing faith and freedom in motion.',
+            tags: ['Soprano', 'Actress', 'Duet Partner']
+          },
+          {
+            id: 'triumph',
+            label: 'Triumph',
+            still: './images/scene_6_triumph.jpg',
+            accent: '#d4af37',
+            eyebrow: '06 / Revelation 12',
+            title: 'Eternal Victory',
+            body: 'The celestial realm of triumph. Stream the 10 victory anthems of His Glory on Spotify & YouTube.',
+            tags: ['Revelation 12', 'Glory Everlasting', 'Victory Anthem'],
+            cta: {
+              primary: { label: 'Listen on Spotify', href: '#music' },
+              secondary: { label: 'View Dashboard', href: './dashboard.html' }
+            }
+          }
+        ]
+      });
+    }
   </script>
 </body>
 </html>
