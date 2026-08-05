@@ -97,6 +97,27 @@
     .event{grid-template-columns:1fr}
     .nav{display:none}
   }
+
+  /* ── Scroll-World Visibility Gate ──────────────────────────────
+     Keep engine position:fixed intact (required for 3D effect).
+     Hide all fixed layers by default; show only while #world-container
+     is intersecting the viewport. This prevents bleed onto other sections. */
+  .sw-sky,.sw-scrollbar,.sw-topbar,.sw-stage,.sw-copylayer,.sw-route,.sw-hint{
+    visibility:hidden;
+    pointer-events:none;
+    transition:visibility 0s;
+  }
+  body.sw-active .sw-sky,
+  body.sw-active .sw-scrollbar,
+  body.sw-active .sw-topbar,
+  body.sw-active .sw-stage,
+  body.sw-active .sw-copylayer,
+  body.sw-active .sw-route,
+  body.sw-active .sw-hint{
+    visibility:visible;
+  }
+  /* Re-enable click targets inside copylayer when active */
+  body.sw-active .sw-copy__cta{ pointer-events:auto; }
 </style>
 </head>
 <body>
@@ -125,7 +146,7 @@
   </header>
 
   <!-- 3D Scroll-World Container -->
-  <div id="world-container" style="position:relative; overflow:hidden; width:100%; min-height:100vh;"></div>
+  <div id="world-container" style="position:relative; width:100%; min-height:100vh;"></div>
 
   <section id="artists">
     <div class="container">
@@ -413,6 +434,17 @@
         ]
       });
     }
+    // ── Scroll-World Visibility Gate via IntersectionObserver ──
+    (function(){
+      var wc = document.getElementById('world-container');
+      if (!wc) return;
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          document.body.classList.toggle('sw-active', e.isIntersecting);
+        });
+      }, { threshold: 0.01 });
+      io.observe(wc);
+    })();
   </script>
 </body>
 </html>
