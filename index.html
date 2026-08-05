@@ -54,16 +54,17 @@
   /* artist card */
   .artist{background:var(--surface);border:1px solid var(--border);border-radius:22px;overflow:hidden;transition:.25s;display:flex;flex-direction:column}
   .artist:hover{border-color:#4a4a4a;transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.4)}
-  .artist-img-wrapper{width:100%;padding:16px 16px 0;display:flex;justify-content:center;background:radial-gradient(circle at 50% 30%,rgba(124,58,237,.12),transparent 70%)}
-  .artist .face{width:140px;height:140px;border-radius:50%;border:3px solid rgba(212,175,55,.4);box-shadow:0 6px 20px rgba(0,0,0,.5);background-size:cover;background-position:center top;transition:transform .3s ease}
+  .artist-img-wrapper{width:100%;padding:20px 16px 8px;display:flex;justify-content:center;background:radial-gradient(circle at 50% 30%,rgba(124,58,237,.15),transparent 70%)}
+  .artist .face{width:130px;height:130px;border-radius:50%;border:3px solid rgba(212,175,55,.45);box-shadow:0 6px 20px rgba(0,0,0,.5);background-size:cover;background-position:center top;transition:transform .3s ease}
   .artist:hover .face{transform:scale(1.05);border-color:var(--gold)}
-  .artist .body{padding:20px;display:flex;flex-direction:column;flex:1}
-  .artist .name{font-size:22px;font-weight:800;margin-bottom:2px;text-align:center}
-  .artist .role{color:var(--gold);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px;text-align:center}
-  .artist .detail-list{font-size:13px;color:var(--muted);line-height:1.55;margin-bottom:12px;display:flex;flex-direction:column;gap:6px}
-  .artist .detail-item{display:flex;gap:6px}
-  .artist .detail-item b{color:var(--text);font-weight:600;min-width:64px}
-  .artist .blurb{color:var(--muted);font-size:13px;line-height:1.6;margin-bottom:14px;background:rgba(0,0,0,.2);padding:10px 12px;border-radius:10px;border-left:3px solid var(--purple)}
+  .artist .body{padding:18px 20px 22px;display:flex;flex-direction:column;flex:1}
+  .artist .name{font-size:22px;font-weight:800;margin-bottom:2px;text-align:center;color:#fff}
+  .artist .role{color:var(--gold);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px;text-align:center}
+  .artist .detail-list{font-size:13px;color:var(--muted);line-height:1.5;margin-bottom:14px;display:flex;flex-direction:column;gap:8px}
+  .artist .detail-item{display:flex;align-items:baseline;gap:8px}
+  .artist .detail-item b{color:var(--text);font-weight:600;min-width:68px;flex-shrink:0}
+  .artist .detail-item span{color:var(--muted);flex:1}
+  .artist .blurb{color:var(--muted);font-size:13px;line-height:1.55;margin-bottom:14px;background:rgba(0,0,0,.25);padding:10px 12px;border-radius:10px;border-left:3px solid var(--purple)}
   .artist .tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto}
   .tag{padding:4px 10px;border-radius:999px;background:#0f0f11;border:1px solid var(--border);color:var(--muted);font-size:11px;font-weight:600}
 
@@ -144,11 +145,11 @@
             <div class="name">Melody</div>
             <div class="role">Female Lead Vocalist & Songwriter</div>
             <div class="detail-list">
-              <div class="detail-item"><b>Giọng:</b> Natural Female Contralto</div>
-              <div class="detail-item"><b>Hình tượng:</b> Mary Magdalene (Xức dầu thờ phượng)</div>
-              <div class="detail-item"><b>Tác phẩm:</b> Worthy the Name, Glory Everlasting</div>
+              <div class="detail-item"><b>Voice:</b><span>Natural Female Contralto</span></div>
+              <div class="detail-item"><b>Persona:</b><span>Mary Magdalene Devotion</span></div>
+              <div class="detail-item"><b>Works:</b><span>Worthy the Name, Glory Everlasting</span></div>
             </div>
-            <div class="blurb">Vocalist nữ chính sáng tác từ sự cầu nguyện và trải nghiệm tâm linh. Mỗi nốt nhạc là một sự dâng hiến trọn vẹn tâm hồn.</div>
+            <div class="blurb">Female lead voice composing from prayer and spiritual encounter. Every song is born from quiet worship and total devotion.</div>
             <div class="tags"><span class="tag">Contralto</span><span class="tag">Songwriter</span><span class="tag">Lead Voice</span></div>
           </div>
         </div>
@@ -161,11 +162,11 @@
             <div class="name">Noah</div>
             <div class="role">Male Lead Vocalist & Worship Leader</div>
             <div class="detail-list">
-              <div class="detail-item"><b>Giọng:</b> Warm Textured Baritone</div>
-              <div class="detail-item"><b>Phong cách:</b> Điềm tĩnh, đầy sức mạnh</div>
-              <div class="detail-item"><b>Tác phẩm:</b> The Giant Fell, Archangel's Sword</div>
+              <div class="detail-item"><b>Voice:</b><span>Warm Textured Baritone</span></div>
+              <div class="detail-item"><b>Style:</b><span>Steady, Bold & Grounded</span></div>
+              <div class="detail-item"><b>Works:</b><span>The Giant Fell, Archangel's Sword</span></div>
             </div>
-            <div class="blurb">Giọng nam chính ấm áp và sâu lắng. Không phô trương biểu diễn mà truyền tải chân lý và thông điệp qua từng câu hát.</div>
+            <div class="blurb">Deep, resonant male lead voice. Carries truth with precision, delivering powerful victory anthems with quiet strength.</div>
             <div class="tags"><span class="tag">Baritone</span><span class="tag">Worship Leader</span><span class="tag">Male Lead</span></div>
           </div>
         </div>
@@ -178,11 +179,11 @@
             <div class="name">Harmony</div>
             <div class="role">Gold-Standard Music Editor & Arranger</div>
             <div class="detail-list">
-              <div class="detail-item"><b>Giọng:</b> Low Measured Alto</div>
-              <div class="detail-item"><b>Phong cách:</b> Tối giản, chính xác tuyệt đối</div>
-              <div class="detail-item"><b>Tác phẩm:</b> Gold Standard, Refiner's Fire</div>
+              <div class="detail-item"><b>Voice:</b><span>Low Measured Alto</span></div>
+              <div class="detail-item"><b>Style:</b><span>Minimalist & Exact Precision</span></div>
+              <div class="detail-item"><b>Works:</b><span>Gold Standard, Refiner's Fire</span></div>
             </div>
-            <div class="blurb">Nhà biên tập và hòa âm chuẩn mực. Tinh chỉnh từng lời ca và nốt nhạc cho đến khi đạt độ tinh khiết và vàng mười.</div>
+            <div class="blurb">Gold-standard sacred editor. Refines every lyric, arrangement, and harmony until only pure essential truth remains.</div>
             <div class="tags"><span class="tag">Gold-Standard Editor</span><span class="tag">Arranger</span><span class="tag">Alto</span></div>
           </div>
         </div>
@@ -195,11 +196,11 @@
             <div class="name">Cadence</div>
             <div class="role">Guest Vocalist & Professional Actress</div>
             <div class="detail-list">
-              <div class="detail-item"><b>Giọng:</b> Clear Versatile Soprano</div>
-              <div class="detail-item"><b>Mối quan hệ:</b> Em gái song sinh của Melody</div>
-              <div class="detail-item"><b>Tác phẩm:</b> Unscripted (Duet with Melody)</div>
+              <div class="detail-item"><b>Voice:</b><span>Clear Versatile Soprano</span></div>
+              <div class="detail-item"><b>Relation:</b><span>Melody's Younger Twin Sister</span></div>
+              <div class="detail-item"><b>Works:</b><span>Unscripted (Duet with Melody)</span></div>
             </div>
-            <div class="blurb">Nữ diễn viên tài năng và ca sĩ khách mời. Đại diện cho sự tự do, linh hoạt và đức tin tràn đầy năng lượng trên sân khấu.</div>
+            <div class="blurb">Versatile actress and guest vocalist. Represents freedom and faith in motion, sharing Melody's voice with a different path.</div>
             <div class="tags"><span class="tag">Soprano</span><span class="tag">Actress</span><span class="tag">Twin Sister</span></div>
           </div>
         </div>
